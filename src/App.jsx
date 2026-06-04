@@ -4,6 +4,7 @@ import ProductMarquee from "./components/ProductMarquee"
 import ProductsGrid from "./components/ProductsGrid"
 import WhyThisSite from "./components/WhyThisSite"
 import SocialProof from "./components/SocialProof"
+import HotProducts from "./components/HotProducts"
 import FinalCTA from "./components/FinalCTA"
 import Footer from "./components/Footer"
 
@@ -15,6 +16,7 @@ function App() {
       <ProductMarquee />
       <ProductsGrid />
       <SocialProof />
+      <HotProducts />
       <WhyThisSite />
       <FinalCTA />
       <Footer />
