@@ -119,6 +119,18 @@ const products = [
     image: "https://m.media-amazon.com/images/I/81LLt+qw2FL._AC_SX679_.jpg",
     amazonUrl: "https://amzn.to/4ao7AhN",
   },
+  {
+    id: 21,
+    name: "4th of July Sunglasses - 3 Pack American Flag Sunglasses for Women Men, Patriotic Red White and Blue Glasses",
+    image: "https://m.media-amazon.com/images/I/71ja8Wj06iL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4uhLogz",
+  },
+  {
+    id: 22,
+    name: "LIKSMU Heart Sunglasses for Women Trendy Cat Eye Love Shaped Sunglasses Vintage Lovely Retro Cute Sun Glasses",
+    image: "https://m.media-amazon.com/images/I/71pH9zPxPyL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4xrKXTV",
+  },
 ]
 
 export default products
