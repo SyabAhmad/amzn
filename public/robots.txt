@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://fifafoot.vercel.app/sitemap.xml
+Sitemap: https://fifa26.page/sitemap.xml

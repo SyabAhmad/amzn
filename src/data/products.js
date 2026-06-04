@@ -65,6 +65,60 @@ const products = [
     image: "https://m.media-amazon.com/images/I/61sEPdmmTqL._AC_SY741_.jpg",
     amazonUrl: "https://amzn.to/3S1Vy7y",
   },
+  {
+    id: 12,
+    name: "Outerstuff FIFA World Cup 2026 Mens Short Sleeve Sublimated Soccer Fashion Top",
+    image: "https://m.media-amazon.com/images/I/61qZ35dubHL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4frT4Ju",
+  },
+  {
+    id: 13,
+    name: "Soccer 2026 Shirts for Women Men USA Shorts Sleeve T Shirt Football Themed Graphic Tee Top",
+    image: "https://m.media-amazon.com/images/I/81OWyz-qrNL._AC_SY741_.jpg",
+    amazonUrl: "https://amzn.to/4dLAZEY",
+  },
+  {
+    id: 14,
+    name: "Soccer Cup 2026 Shirt USA Football Match Season Jersey Game Day T-Shirt Soccer Tournament Inspired Unisex Sports Graphic Tee",
+    image: "https://m.media-amazon.com/images/I/812NShsV0XL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4oeibC0",
+  },
+  {
+    id: 15,
+    name: "USA Red Baseball Jersey Stitched America Shirts Sports Uniform Embroidered #1 Gift for Men and Women (Small-3XL)",
+    image: "https://m.media-amazon.com/images/I/714U-2Wr8sL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/43gzGrv",
+  },
+  {
+    id: 16,
+    name: "REORIA Women's Sexy Halter Backless Double Lined Tank Top Y2k Trendy Camisole Crop Tops",
+    image: "https://m.media-amazon.com/images/I/61p5gjGm5-L._AC_SY741_.jpg",
+    amazonUrl: "https://amzn.to/3QmaxZy",
+  },
+  {
+    id: 17,
+    name: "The World Flag Bucket Hat for Men Women Printed Fisherman Hat Packable Sun Cap Travel Outdoor Beach Caps",
+    image: "https://m.media-amazon.com/images/I/61fPeO1uECL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4uT47QM",
+  },
+  {
+    id: 18,
+    name: "Kids Print 3D World Flags of The Countries Long Sleeve Hooded Hoodies Sweatshirts for Youth Boys Girls 6-14 Years",
+    image: "https://m.media-amazon.com/images/I/61rh-AjpdVL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4flY7ep",
+  },
+  {
+    id: 19,
+    name: "Mepase 2 Pcs Sun Hat American Flag Bucket Hat Sun Protection Hat Patriotic Foldable Wide Brim Hat for 4th of July Hiking",
+    image: "https://m.media-amazon.com/images/I/71Wx4GxxFjL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/3Q1BaTm",
+  },
+  {
+    id: 20,
+    name: "Boonie Hat with Chin Strap, Wide Brim, Patriotic American Flag Red White and Blue Hat for 4th of July, Sun Fishing Hiking Safari Outdoor Hats for Men and Women",
+    image: "https://m.media-amazon.com/images/I/81LLt+qw2FL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4ao7AhN",
+  },
 ]
 
 export default products
