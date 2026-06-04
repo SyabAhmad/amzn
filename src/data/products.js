@@ -59,6 +59,12 @@ const products = [
     image: "https://m.media-amazon.com/images/I/71Hw9YaLOTL._AC_SX679_.jpg",
     amazonUrl: "https://amzn.to/43Pu4og",
   },
+  {
+    id: 11,
+    name: "Komorebi Women's Tennis Skirt - High Waisted Pleated Golf Skorts with Pockets - Athletic Workout Skirt",
+    image: "https://m.media-amazon.com/images/I/61sEPdmmTqL._AC_SY741_.jpg",
+    amazonUrl: "https://amzn.to/3S1Vy7y",
+  },
 ]
 
 export default products
