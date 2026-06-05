@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import products from "../data/products"
 
 const ProductMarquee = () => {
@@ -14,11 +15,9 @@ const ProductMarquee = () => {
       <div className="relative">
         <div className="flex gap-4 marquee-track">
           {items.map((product, i) => (
-            <a
+            <Link
               key={`${product.id}-${i}`}
-              href={product.amazonUrl}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+              to={`/product/${product.id}`}
               className="flex-shrink-0 w-48 sm:w-56 aspect-square rounded-xl overflow-hidden bg-surface-2 border border-zinc-800 hover:border-zinc-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand/10"
             >
               <img
@@ -27,7 +26,7 @@ const ProductMarquee = () => {
                 loading="lazy"
                 className="w-full h-full object-cover"
               />
-            </a>
+            </Link>
           ))}
         </div>
 
