@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Footer = () => {
   const year = new Date().getFullYear()
 
@@ -14,7 +16,15 @@ const Footer = () => {
           </span>
         </div>
 
-        <p className="text-zinc-600 text-xs">© {year} FIFA26 Store. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          <Link to="/blog" className="text-zinc-600 hover:text-white text-xs transition-colors">
+            Blog
+          </Link>
+          <Link to="/" className="text-zinc-600 hover:text-white text-xs transition-colors">
+            Home
+          </Link>
+          <p className="text-zinc-600 text-xs">© {year} FIFA26 Store</p>
+        </div>
       </div>
     </footer>
   )

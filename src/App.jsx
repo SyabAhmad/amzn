@@ -1,24 +1,19 @@
+import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import HeroSection from "./components/HeroSection"
-import ProductMarquee from "./components/ProductMarquee"
-import ProductsGrid from "./components/ProductsGrid"
-import SocialProof from "./components/SocialProof"
-import HotProducts from "./components/HotProducts"
-import WhyThisSite from "./components/WhyThisSite"
-import FinalCTA from "./components/FinalCTA"
 import Footer from "./components/Footer"
+import HomePage from "./pages/HomePage"
+import BlogsPage from "./pages/BlogsPage"
+import BlogPostPage from "./pages/BlogPostPage"
 
 function App() {
   return (
     <div className="min-h-screen bg-surface text-white font-sans">
       <Navbar />
-      <HeroSection />
-      <ProductMarquee />
-      <ProductsGrid />
-      <SocialProof />
-      <HotProducts />
-      <WhyThisSite />
-      <FinalCTA />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/blog" element={<BlogsPage />} />
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
+      </Routes>
       <Footer />
     </div>
   )

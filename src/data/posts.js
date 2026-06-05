@@ -1,0 +1,58 @@
+const posts = [
+  {
+    id: 1,
+    title: "Top 10 FIFA 2026 Jerseys You Need in Your Collection",
+    slug: "top-fifa-2026-jerseys",
+    excerpt: "From Germany's iconic home kit to the latest adidas designs, discover the must-have FIFA 2026 jerseys every football fan should own this World Cup season.",
+    content: "The FIFA 2026 World Cup is bringing a new wave of football fashion. From Germany's classic white and black home replica jersey to限量 edition retro kits, this year's collection is the biggest yet. Whether you're supporting Die Mannschaft or rocking a streetwear-inspired training top, the 2026 jerseys blend pitch performance with casual style. Shop the full range including adidas Germany 26 Home Replica Jersey, youth training jerseys for kids, and sublimated fashion tops for match day or everyday wear.",
+    tags: ["jerseys", "FIFA 2026", "Germany", "World Cup", "football fashion"],
+    date: "June 4, 2026",
+  },
+  {
+    id: 2,
+    title: "Best Football Sneakers 2026: adidas Samba to Copa Pure",
+    slug: "best-football-sneakers-2026",
+    excerpt: "The ultimate guide to trending football sneakers from adidas Samba OG to Copa Pure IV — the boots and trainers dominating TikTok and the pitch in 2026.",
+    content: "Footwear is at the heart of football culture. The adidas Samba OG continues to dominate streetwear fashion while the Copa Pure IV Club brings pro-level performance to firm and multi-ground surfaces. For younger players, lightweight soccer cleats and indoor shoes are essential. Whether you're after retro style or modern turf technology, this guide covers the best football sneakers and boots trending in 2026 from Amazon's top sellers.",
+    tags: ["sneakers", "adidas", "Samba", "Copa Pure", "football boots", "cleats"],
+    date: "June 3, 2026",
+  },
+  {
+    id: 3,
+    title: "FIFA 2026 Fan Gear Guide: Hats, Scarves & Accessories",
+    slug: "fifa-2026-fan-gear-guide",
+    excerpt: "Complete guide to World Cup 2026 fan accessories including baseball caps, bucket hats, sunglasses, and patriotic gear for the ultimate match day outfit.",
+    content: "Show your team spirit with the best FIFA 2026 fan gear. From Outerstuff's Pro Crown Snapback hat to world flag bucket hats and American flag sunglasses, the accessories this season are bold and patriotic. Baseball caps, beanies, scarves, and wide brim sun hats are all trending for World Cup 2026. Whether you're heading to the stadium or watching at a watch party, complete your match day look with these essential fan accessories available on Amazon.",
+    tags: ["hats", "caps", "accessories", "fan gear", "patriotic", "bucket hat"],
+    date: "June 2, 2026",
+  },
+  {
+    id: 4,
+    title: "Kids Football Gear 2026: Jerseys, Hoodies & Training Wear",
+    slug: "kids-football-gear-2026",
+    excerpt: "Everything young football fans need for FIFA 2026 — from kids soccer jerseys and training uniforms to world flag hoodies and youth cleats.",
+    content: "Get the little ones ready for the World Cup with the best kids football gear. Youth soccer jerseys, training uniform sets, 3D world flag hoodies, and comfortable sweatshirts for boys and girls aged 4-16 years. Whether they're playing PE, practicing with the team, or cheering from home, these FIFA 2026-inspired kids clothes are comfortable, durable, and stylish. Top picks include kids soccer practice outfits, printed flag hoodies, and adjustable caps for sun protection during outdoor play.",
+    tags: ["kids", "youth", "jerseys", "hoodies", "training", "children"],
+    date: "June 1, 2026",
+  },
+  {
+    id: 5,
+    title: "Streetwear Football Fashion: The 2026 Trend Report",
+    slug: "streetwear-football-fashion-2026",
+    excerpt: "How football culture is driving streetwear in 2026 — from bomber jackets and track pants to graphic tees and tennis skirts making waves on TikTok.",
+    content: "Football and streetwear have never been more connected. In 2026, the pitch meets the pavement with adidas track pants, bomber jackets, graphic football tees, and high waisted pleated skorts taking over TikTok feeds. The football aesthetic is everywhere — from varsity jackets with team patches to bold graphic tees featuring world cup slogans. Even tennis skirts and golf skorts are being adopted by football fans for a sporty chic look. Discover the trending streetwear football fashion pieces that are dominating Amazon this season.",
+    tags: ["streetwear", "fashion", "TikTok", "trends", "sportswear", "graphic tees"],
+    date: "May 30, 2026",
+  },
+  {
+    id: 6,
+    title: "Best Amazon Deals for World Cup 2026: Complete Shopping List",
+    slug: "best-amazon-deals-world-cup-2026",
+    excerpt: "Your ultimate shopping list for FIFA 2026 — jerseys, sneakers, caps, sunglasses, and fan gear all available with fast Amazon shipping and global delivery.",
+    content: "Planning your FIFA 2026 shopping? We've curated the best Amazon deals for the World Cup season. From official Germany jerseys and adidas sneakers to patriotic 4th of July hats and heart-shaped sunglasses, our list covers everything football fans need. Whether you're buying for yourself or looking for gifts for the football lover in your life, Amazon's selection of FIFA 2026 gear, streetwear, and accessories ships globally. Shop now and join millions of fans worldwide preparing for the biggest tournament in football.",
+    tags: ["deals", "Amazon", "shopping", "World Cup", "gifts", "football"],
+    date: "May 28, 2026",
+  },
+]
+
+export default posts
