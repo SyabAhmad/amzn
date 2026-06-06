@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAKnockoutPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Knockout Stage | Round of 32, 16, QF, SF, Final"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Knockout Stage | Round of 32, 16, QF, SF, Final",
+    description: "FIFA 2026 knockout stage: Round of 32, Round of 16, Quarterfinals, Semifinals, and the Final. Single-elimination drama from June 28 – July 19, 2026.",
+    path: "/fifa-knockout",
+    keywords: "fifa knockout, fifa 2026 knockout, fifa 2026 knockout stage, world cup knockout, fifa round of 16, fifa quarterfinals, fifa semifinals, fifa 2026 final, fifa elimination",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 Knockout", url: "https://fifa26.page/fifa-knockout" },
+    ]),
+    jsonLdId: "knockout-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

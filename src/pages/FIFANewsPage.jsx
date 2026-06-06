@@ -1,15 +1,23 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import posts from "../data/posts"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFANewsPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 News | Latest Updates, Rumors, Transfers & World Cup Updates"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 News | Latest Updates, Rumors, Transfers & World Cup Updates",
+    description: "Breaking FIFA 2026 World Cup news: squad announcements, ticket updates, stadium preparations, sponsor deals, transfer rumors, and exclusive insights. Updated daily.",
+    path: "/fifa-news",
+    keywords: "fifa news, fifa 2026 news, world cup 2026 news, fifa latest news, fifa transfer news, fifa squad news, fifa breaking news, world cup news today",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 News", url: "https://fifa26.page/fifa-news" },
+    ]),
+    jsonLdId: "news-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

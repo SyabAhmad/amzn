@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAWorldCupSchedulePage = () => {
-  useEffect(() => {
-    document.title = "FIFA World Cup 2026 Schedule | Calendar, Dates, Times & Bracket"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA World Cup 2026 Schedule | Calendar, Dates, Times & Bracket",
+    description: "FIFA World Cup 2026 full schedule calendar. June-July 2026 matches. Add to Google Calendar, Apple Calendar, or Outlook. All dates, kickoff times, and venues.",
+    path: "/fifa-world-cup-schedule",
+    keywords: "fifa world cup 2026 schedule, world cup 2026 calendar, fifa 2026 dates, fifa 2026 calendar download, fifa 2026 add to calendar, world cup schedule 2026",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA World Cup 2026 Schedule", url: "https://fifa26.page/fifa-world-cup-schedule" },
+    ]),
+    jsonLdId: "wc-schedule-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

@@ -1,15 +1,23 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import posts from "../data/posts"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const BlogsPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Blog | Football Gear Guides, Sneaker Trends & World Cup Fashion"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Blog | Football Gear Guides, Sneaker Trends & World Cup Fashion",
+    description: "Expert FIFA 2026 blog covering the best jerseys, football sneakers, streetwear, kids gear, fan accessories, Amazon deals, watch online streaming guides, ticket buying tips, and host city travel guides for World Cup 2026.",
+    path: "/blog",
+    keywords: "fifa 2026 blog, fifa blog, world cup blog, fifa 2026 guides, football gear blog, world cup fashion, fifa sneakers, fifa jerseys, fifa tickets guide, fifa watch online, fifa travel guide",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "Blog", url: "https://fifa26.page/blog" },
+    ]),
+    jsonLdId: "blog-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

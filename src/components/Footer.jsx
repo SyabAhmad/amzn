@@ -37,6 +37,8 @@ const Footer = () => {
         { label: "Tickets", to: "/fifa-tickets" },
         { label: "Fan Zone", to: "/fifa-fan-zone" },
         { label: "Blog", to: "/blog" },
+        { label: "About", to: "/about" },
+        { label: "Contact", to: "/contact" },
       ],
     },
   ]

@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAPredictionsPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Predictions | Bracket, Winner, Top Scorer & Betting Odds"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Predictions | Bracket, Winner, Top Scorer & Betting Odds",
+    description: "FIFA 2026 predictions: expert picks for the winner, golden boot race, dark horses, group stage predictions, knockout bracket, betting odds, and fan bracket challenge.",
+    path: "/fifa-predictions",
+    keywords: "fifa 2026 predictions, fifa predictions, world cup predictions, fifa bracket, fifa 2026 winner, fifa golden boot, fifa 2026 picks, world cup bracket challenge, fifa dark horse, fifa betting odds",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 Predictions", url: "https://fifa26.page/fifa-predictions" },
+    ]),
+    jsonLdId: "predictions-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAHostCitiesPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Host Cities | 16 Stadiums, USA, Mexico & Canada"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Host Cities | 16 Stadiums, USA, Mexico & Canada",
+    description: "All 16 FIFA 2026 host stadiums across 11 cities in USA, Mexico, and Canada. Capacity, location, travel tips, fan zones, accommodation, and best places to stay for each host city.",
+    path: "/fifa-host-cities",
+    keywords: "fifa host cities, fifa 2026 host cities, world cup 2026 host cities, fifa 2026 stadiums, metlife stadium, estadio azteca, fifa 2026 venues, fifa stadium guide, fifa 2026 usa cities, fifa 2026 mexico cities, fifa 2026 canada cities",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 Host Cities", url: "https://fifa26.page/fifa-host-cities" },
+    ]),
+    jsonLdId: "hostcities-jsonld",
+  })
 
   const cities = [
     { city: "Atlanta", country: "USA 🇺🇸", stadium: "Mercedes-Benz Stadium", capacity: "71,000", matches: "Group + Knockout" },

@@ -23,6 +23,7 @@ const Navbar = () => {
     { label: "Tickets", to: "/fifa-tickets" },
     { label: "News", to: "/fifa-news" },
     { label: "Blog", to: "/blog" },
+    { label: "About", to: "/about" },
   ]
 
   return (

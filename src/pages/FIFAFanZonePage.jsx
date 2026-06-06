@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAFanZonePage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Fan Zone | Watch Parties, Meetups & Big Screen Events"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Fan Zone | Watch Parties, Meetups & Big Screen Events",
+    description: "Official FIFA Fan Zones in 16 host cities with free big-screen viewing of every match. Live entertainment, food, drinks, family activities, and supporter meetups for FIFA 2026.",
+    path: "/fifa-fan-zone",
+    keywords: "fifa fan zone, fifa 2026 fan zone, fifa watch party, fifa big screen, fifa fanzone, world cup fan zone, fifa meetup, fifa supporter meetup, fifa 2026 watch party",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 Fan Zone", url: "https://fifa26.page/fifa-fan-zone" },
+    ]),
+    jsonLdId: "fanzone-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

@@ -1,21 +1,36 @@
-import { useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import posts from "../data/posts"
 import products from "../data/products"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildArticleSchema, buildBreadcrumbSchema } from "../utils/schemas"
 
 const BlogPostPage = () => {
   const { slug } = useParams()
   const post = posts.find((p) => p.slug === slug)
 
-  useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | FIFA 2026 Blog`
-    }
-    window.scrollTo(0, 0)
-  }, [post])
+  useSEO({
+    title: post ? post.title : "Post Not Found",
+    description: post ? post.excerpt : "FIFA 2026 blog post not found.",
+    path: post ? `/blog/${post.slug}` : "/blog",
+    keywords: post ? post.tags.join(", ") : "fifa 2026 blog",
+    jsonLd: post ? {
+      ...buildArticleSchema({
+        title: post.title,
+        description: post.excerpt,
+        url: `https://fifa26.page/blog/${post.slug}`,
+        datePublished: post.date,
+      }),
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "Blog", url: "https://fifa26.page/blog" },
+        { name: post.title, url: `https://fifa26.page/blog/${post.slug}` },
+      ]),
+    } : null,
+    jsonLdId: post ? `blog-${post.id}-jsonld` : "blog-notfound-jsonld",
+  })
 
   if (!post) {
     return (

@@ -1,14 +1,45 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import FAQSection from "../components/FAQSection"
+import useSEO from "../hooks/useSEO"
+import { buildFAQSchema, buildBreadcrumbSchema } from "../utils/schemas"
+
+const liveScoresFAQs = [
+  {
+    q: "How can I follow FIFA 2026 live scores?",
+    a: "Use FIFA+, the official FIFA app, ESPN, BBC Sport, Sky Sports, FOX Sports, or the Google app. Most apps offer push notifications for goals, cards, and final whistles. Bookmark our /fifa-live-scores page for live match links.",
+  },
+  {
+    q: "Are there free apps for FIFA 2026 live scores?",
+    a: "Yes — FIFA+ (free), FotMob (free with ads), SofaScore (free with ads), Google Search (just type the team name), and the Apple Sports app. All offer real-time scores, lineups, and stats.",
+  },
+  {
+    q: "Will VAR be used in FIFA 2026?",
+    a: "Yes — VAR (Video Assistant Referee) will be used in all 104 matches, including semi-automated offside technology. FIFA has confirmed that the goal-line technology and ball-tracking improvements from 2022 will be enhanced.",
+  },
+  {
+    q: "How accurate are FIFA 2026 live scores?",
+    a: "Official sources (FIFA+, broadcaster apps) have a delay of 0-5 seconds. Social media posts and unofficial trackers may be 30-60 seconds behind. For gambling or fantasy purposes, always use the official source.",
+  },
+]
 
 const FIFALiveScoresPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Live Scores | Real-Time Match Updates & Results"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Live Scores — Real-Time Match Updates, Goals & Stats",
+    description: "Follow FIFA 2026 World Cup live scores in real time. Goal alerts, lineups, possession stats, VAR decisions, and group tables. Free apps: FIFA+, FotMob, SofaScore. Push notifications for every goal.",
+    path: "/fifa-live-scores",
+    keywords: "fifa live scores, fifa live, fifa 2026 live, world cup live scores, fifa live stream, fifa match tracker, fifa goal alerts, fifa real time, fifa results, fifa today, fifa live updates, fifa scores today, world cup live, fifa app, fifa+",
+    jsonLd: {
+      ...buildFAQSchema(liveScoresFAQs),
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "FIFA 2026 Live Scores", url: "https://fifa26.page/fifa-live-scores" },
+      ]),
+    },
+    jsonLdId: "livescores-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">
@@ -71,7 +102,12 @@ const FIFALiveScoresPage = () => {
           </div>
         </div>
 
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-brand/10 to-amber-500/10 border border-brand/20 text-center">
+        <FAQSection
+          title="FIFA 2026 Live Scores — FAQ"
+          faqs={liveScoresFAQs}
+        />
+
+        <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-brand/10 to-amber-500/10 border border-brand/20 text-center">
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
             Never Miss a Goal
           </h2>

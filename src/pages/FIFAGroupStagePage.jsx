@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAGroupStagePage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Group Stage | 12 Groups, 48 Teams, 72 Matches"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Group Stage | 12 Groups, 48 Teams, 72 Matches",
+    description: "Complete FIFA 2026 group stage: 12 groups (A-L), 48 teams, 72 matches from June 11-27, 2026. Group tables, predictions, qualifying rules, and all 48 nations competing.",
+    path: "/fifa-group-stage",
+    keywords: "fifa group stage, fifa 2026 group stage, fifa 2026 groups, world cup group stage, fifa 48 teams, fifa 12 groups, fifa 2026 group tables, world cup 2026 groups",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 Group Stage", url: "https://fifa26.page/fifa-group-stage" },
+    ]),
+    jsonLdId: "groupstage-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

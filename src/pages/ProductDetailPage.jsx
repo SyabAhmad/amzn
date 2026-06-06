@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useMemo } from "react"
 import { useParams, Link } from "react-router-dom"
 import products from "../data/products"
 import posts from "../data/posts"
+import useSEO from "../hooks/useSEO"
+import { buildProductSchema, buildBreadcrumbSchema } from "../utils/schemas"
 
 const relatedPosts = posts.sort(() => Math.random() - 0.5).slice(0, 3)
 
@@ -11,12 +13,31 @@ const ProductDetailPage = () => {
   const [apiData, setApiData] = useState(null)
   const [apiLoading, setApiLoading] = useState(false)
 
-  useEffect(() => {
-    if (product) {
-      document.title = `${product.name} | FIFA 2026 Football Gear & Streetwear`
+  const productJsonLd = useMemo(() => {
+    if (!product) return null
+    return {
+      ...buildProductSchema({
+        name: product.name,
+        description: `Buy ${product.name} on Amazon. FIFA 2026 World Cup gear, official jerseys, fan accessories, and streetwear.`,
+        image: product.image,
+        url: `https://fifa26.page/product/${product.id}`,
+        sku: product.asin || `fifa26-${product.id}`,
+      }),
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: `Product ${product.id}`, url: `https://fifa26.page/product/${product.id}` },
+      ]),
     }
-    window.scrollTo(0, 0)
   }, [product])
+
+  useSEO({
+    title: product ? product.name.slice(0, 60) : "Product Not Found",
+    description: product ? `Buy ${product.name} on Amazon. ${product.name.slice(0, 100)}.` : "FIFA 2026 product.",
+    path: product ? `/product/${product.id}` : "/",
+    keywords: product ? `${product.name}, fifa 2026, ${product.tags?.join(", ") || "world cup gear"}` : "fifa 2026",
+    jsonLd: productJsonLd,
+    jsonLdId: `product-${id}-jsonld`,
+  })
 
   useEffect(() => {
     if (product?.asin) {

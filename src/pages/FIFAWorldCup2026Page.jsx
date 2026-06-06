@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAWorldCup2026Page = () => {
-  useEffect(() => {
-    document.title = "FIFA World Cup 2026 | Official Guide, Dates, Host Cities & Teams"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA World Cup 2026 | Official Guide, Dates, Host Cities & Teams",
+    description: "The complete official guide to the FIFA World Cup 2026 — historic 48-team tournament across USA, Mexico & Canada, June 11 – July 19, 2026. 104 matches, 16 stadiums, all the dates, teams, host cities, and tickets info.",
+    path: "/fifa-world-cup-2026",
+    keywords: "fifa world cup 2026, fifa 2026, world cup 2026, fifa 2026 dates, fifa 2026 host cities, fifa 2026 teams, fifa 2026 stadiums, world cup 2026 guide, fifa 2026 usa mexico canada",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA World Cup 2026", url: "https://fifa26.page/fifa-world-cup-2026" },
+    ]),
+    jsonLdId: "wc2026-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

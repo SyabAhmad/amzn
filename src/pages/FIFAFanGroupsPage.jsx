@@ -1,14 +1,22 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import useSEO from "../hooks/useSEO"
+import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const FIFAFanGroupsPage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Fan Groups | Country Supporter Communities & Meetups"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Fan Groups | Country Supporter Communities & Meetups",
+    description: "Find your country's FIFA 2026 supporter club, local fan meetups, and global community. USA, Mexico, Brazil, Argentina, France, Germany, England, Spain, Portugal, Netherlands, Italy supporter groups.",
+    path: "/fifa-fan-groups",
+    keywords: "fifa fan groups, fifa supporter clubs, fifa 2026 fan communities, country fan groups, usa supporters, brazil supporters, argentina fans, fifa meetups, world cup fan groups",
+    jsonLd: buildBreadcrumbSchema([
+      { name: "Home", url: "https://fifa26.page/" },
+      { name: "FIFA 2026 Fan Groups", url: "https://fifa26.page/fifa-fan-groups" },
+    ]),
+    jsonLdId: "fangroups-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">

@@ -1,14 +1,53 @@
-import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import FAQSection from "../components/FAQSection"
+import useSEO from "../hooks/useSEO"
+import { buildFAQSchema, buildBreadcrumbSchema } from "../utils/schemas"
+
+const scheduleFAQs = [
+  {
+    q: "What is the FIFA 2026 match schedule?",
+    a: "FIFA 2026 runs June 11 – July 19, 2026. Group stage: June 11-27. Round of 32: June 28 – July 3. Round of 16: July 4-7. Quarterfinals: July 10-11. Semifinals: July 14-15. Third-place: July 18. Final: July 19 at MetLife Stadium.",
+  },
+  {
+    q: "When is the FIFA 2026 opening match?",
+    a: "The FIFA 2026 opening match is June 11, 2026 at Estadio Azteca in Mexico City, Mexico. It will be the third time Mexico hosts an opening match (after 1970 and 1986).",
+  },
+  {
+    q: "When is the FIFA 2026 Final?",
+    a: "The FIFA 2026 Final is July 19, 2026 at MetLife Stadium in East Rutherford, New Jersey, USA. Kickoff is at 3pm ET (12pm PT). This will be the first men's World Cup Final held in the New York metro area.",
+  },
+  {
+    q: "What time zone are FIFA 2026 matches played in?",
+    a: "Matches are played across 3 time zones: Pacific (Los Angeles, San Francisco, Seattle), Central (Dallas, Houston, Kansas City, Atlanta, Mexico City), and Eastern (Miami, Philadelphia, New York, Toronto). FIFA uses local stadium time in all broadcasts.",
+  },
+  {
+    q: "How can I add FIFA 2026 matches to my calendar?",
+    a: "Once FIFA releases the full schedule with kickoff times, you can subscribe via Google Calendar, Apple Calendar, Outlook, or Yahoo. We'll publish direct calendar links as soon as they're available — bookmark this page for updates.",
+  },
+  {
+    q: "How many rest days are between FIFA 2026 matches?",
+    a: "Teams playing in the group stage have at least 3 rest days between matches. In the knockout stage, teams have 3-4 days between rounds. The final is 4 days after the semifinals to allow travel and recovery.",
+  },
+]
 
 const FIFASchedulePage = () => {
-  useEffect(() => {
-    document.title = "FIFA 2026 Schedule | Full Match Calendar, Dates, Times & TV"
-    window.scrollTo(0, 0)
-  }, [])
+  useSEO({
+    title: "FIFA 2026 Schedule — Full Match Calendar, Dates, Kickoff Times & TV",
+    description: "Complete FIFA 2026 World Cup match schedule. June 11 – July 19, 2026. 104 matches across 16 stadiums. Download the FIFA 2026 calendar with all dates, kickoff times, and TV broadcast info. Add to Google, Apple, or Outlook calendar.",
+    path: "/fifa-schedule",
+    keywords: "fifa schedule, fifa 2026 schedule, world cup 2026 schedule, fifa 2026 calendar, fifa 2026 dates, fifa match dates, fifa 2026 tv schedule, world cup calendar, fifa 2026 kickoff times, fifa 2026 opening match, fifa 2026 final date, fifa 2026 group stage dates",
+    jsonLd: {
+      ...buildFAQSchema(scheduleFAQs),
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "FIFA 2026 Schedule", url: "https://fifa26.page/fifa-schedule" },
+      ]),
+    },
+    jsonLdId: "schedule-jsonld",
+  })
 
   return (
     <main className="pt-24 sm:pt-28 pb-20 px-4">
@@ -65,7 +104,12 @@ const FIFASchedulePage = () => {
           </div>
         </div>
 
-        <div className="p-8 rounded-2xl bg-gradient-to-r from-brand/10 to-amber-500/10 border border-brand/20 text-center">
+        <FAQSection
+          title="FIFA 2026 Schedule — FAQ"
+          faqs={scheduleFAQs}
+        />
+
+        <div className="mt-12 p-8 rounded-2xl bg-gradient-to-r from-brand/10 to-amber-500/10 border border-brand/20 text-center">
           <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
             Plan Your FIFA 2026 Calendar
           </h2>
