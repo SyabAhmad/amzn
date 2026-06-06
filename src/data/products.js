@@ -22,6 +22,7 @@ const products = [
   { id: 21, name: "4th of July Sunglasses - 3 Pack American Flag Sunglasses for Women Men, Patriotic Red White and Blue Glasses", image: "https://m.media-amazon.com/images/I/71ja8Wj06iL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4uhLogz", asin: "" },
   { id: 22, name: "LIKSMU Heart Sunglasses for Women Trendy Cat Eye Love Shaped Sunglasses Vintage Lovely Retro Cute Sun Glasses", image: "https://m.media-amazon.com/images/I/71pH9zPxPyL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xrKXTV", asin: "" },
   { id: 23, name: "CeraVe Hydrating Mineral Sunscreen SPF 30 with Sheer Tint, Tinted Mineral Sunscreen with Zinc Oxide & Titanium Dioxide", image: "https://m.media-amazon.com/images/I/71PN6SSqJlL._SX679_.jpg", amazonUrl: "https://amzn.to/4uiy77w", asin: "" },
+  { id: 24, name: "KALIYADI Womens-Sunglasses Polarized Sunglasses-Womens Trendy: Retro Sun Glasses with UV Protection for Travel Driving", image: "https://m.media-amazon.com/images/I/81UaQObWvQL._AC_SX569_.jpg", amazonUrl: "https://amzn.to/4erfae1", asin: "" },
 ]
 
 export default products
