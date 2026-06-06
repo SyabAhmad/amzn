@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useParams, Link } from "react-router-dom"
 import posts from "../data/posts"
 import products from "../data/products"
+import RandomProducts from "../components/RandomProducts"
 
 const BlogPostPage = () => {
   const { slug } = useParams()
@@ -96,6 +97,7 @@ const BlogPostPage = () => {
           </div>
         )}
       </div>
+      <RandomProducts title="More to Explore" count={12} />
     </main>
   )
 }

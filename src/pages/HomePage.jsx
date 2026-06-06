@@ -1,5 +1,6 @@
 import HeroSection from "../components/HeroSection"
 import ProductMarquee from "../components/ProductMarquee"
+import BigPoster from "../components/BigPoster"
 import ProductsGrid from "../components/ProductsGrid"
 import SocialProof from "../components/SocialProof"
 import HotProducts from "../components/HotProducts"
@@ -11,6 +12,7 @@ const HomePage = () => {
     <>
       <HeroSection />
       <ProductMarquee />
+      <BigPoster />
       <ProductsGrid />
       <SocialProof />
       <HotProducts />

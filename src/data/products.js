@@ -39,6 +39,23 @@ const products = [
   { id: 38, name: "FIFA World Cup 2026 Men's Official Country Team Color Wordmark Logo T-Shirt", image: "https://m.media-amazon.com/images/I/61BJ6m3P24L._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43i5hco", asin: "" },
   { id: 39, name: "Outerstuff FIFA World Cup 2026 Mens Short Sleeve V-Neck Football Jersey", image: "https://m.media-amazon.com/images/I/51wgfGuTwmL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/3Qn3Czm", asin: "" },
   { id: 40, name: "Outerstuff FIFA World Cup 2026 Event Structured Flex Cap Hat", image: "https://m.media-amazon.com/images/I/81gp5k6avAL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4uN2dRA", asin: "" },
+  { id: 41, name: "Nike US Men's National Team Home 2026 Dri Fit Soccer Jersey IB5339-133", image: "https://m.media-amazon.com/images/I/51YLA3ekSQL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4dQN4c2", asin: "" },
+  { id: 42, name: "Nike Men's World Cup T-Shirt - USA", image: "https://m.media-amazon.com/images/I/711ro18G9VL._AC_SX569_.jpg", amazonUrl: "https://amzn.to/4e4rDD5", asin: "" },
+  { id: 43, name: "Outerstuff FIFA World Cup 2026 Mens Long Sleeve V-Neck Hockey Jersey", image: "https://m.media-amazon.com/images/I/71tvBPHLQiL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4ueyVKx", asin: "" },
+  { id: 44, name: "France Outerstuff FIFA World Cup 2026 Women's Soccer Raglan Sleeve Top", image: "https://m.media-amazon.com/images/I/61umo9mdkPL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4vyy7Bn", asin: "" },
+  { id: 45, name: "France Outerstuff FIFA World Cup 2026 Mens Short Sleeve V-Neck Football Jersey", image: "https://m.media-amazon.com/images/I/61kpQy03bZL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/3RTdp0v", asin: "" },
+  { id: 46, name: "USA Soccer Fan Scarf - Double-Sided United States Supporter Scarf for 2026 International Soccer Matches & Game Day", image: "https://m.media-amazon.com/images/I/718Qc5UvrLL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4v4XGKg", asin: "" },
+  { id: 47, name: "England Outerstuff FIFA World Cup 2026 Kids Short Sleeve Sublimated Soccer Fashion Top", image: "https://m.media-amazon.com/images/I/61Bpz-SM8BL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4o8nWRq", asin: "" },
+  { id: 48, name: "Dutchesland Outerstuff FIFA World Cup 2026 Mens Short Sleeve Sublimated Soccer Fashion Top", image: "https://m.media-amazon.com/images/I/61c3OjibiYL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43mZfHt", asin: "" },
+  { id: 49, name: "FIFA World Cup DIY Drawstring Backpack Kit – Soccer Fan Sewing Craft Project – Includes Canvas Panel, Nylon Paracord & Instructions", image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d39654b4-8ff0-432f-9d52-5322d48ea9d3.__CR0,0,1464,600_PT0_SX1464_V1___.png", amazonUrl: "https://amzn.to/4vCxtCZ", asin: "" },
+  { id: 50, name: "Softball Gifts Canvas Tote Bag for Women Birthday Gift for Softball Lovers Stuff Accessories Reusable Bags", image: "https://m.media-amazon.com/images/I/81e0ZNHnYJL._AC_SX569_.jpg", amazonUrl: "https://amzn.to/3SpFGfa", asin: "" },
+  { id: 51, name: "2026 World Cup Fan Soccer Jersey - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71uJuXECcfL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/3SpGBMH", asin: "" },
+  { id: 52, name: "Men's 2026 Fan Soccer Jersey - Fan Version Short Sleeve Shirt for Game Day", image: "https://m.media-amazon.com/images/I/613PEYC10VL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4uo26Lt", asin: "" },
+  { id: 53, name: "Kids Soccer Jersey - Fan Version Short Sleeve Shirt for Game Day, Training Uniform for Boy and Girls", image: "https://m.media-amazon.com/images/I/61Hxo6BlDJL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4vwXhQD", asin: "" },
+  { id: 54, name: "Kids Soccer Jersey for Boys Girls Football Training Shirt Uniform Sport Casual T Shirt for Soccer Fans", image: "https://m.media-amazon.com/images/I/61tGSMNajTL._AC_SY741_.jpg", amazonUrl: "https://amzn.to/3QppkTi", asin: "" },
+  { id: 55, name: "2026 Soccer Fan Jerseys, Soccer Jersey for Men & Women - USA, Canada, Brazil, Argentina, France, Spain, Germany, England", image: "https://m.media-amazon.com/images/I/617fUbPfUVL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4vuoaop", asin: "" },
+  { id: 56, name: "Italy 2026 World Cup Fan Soccer Jersey - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71oWNCMUGWL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xb58oL", asin: "" },
+  { id: 57, name: "Women Sports Crop Tank Tops Mexico Football Summer Sleeveless Green Jersey Tops Workout Tee", image: "https://m.media-amazon.com/images/I/713SHgb0IYL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43S0ZZq", asin: "" },
 ]
 
 export default products
