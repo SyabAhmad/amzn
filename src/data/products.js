@@ -56,6 +56,7 @@ const products = [
   { id: 55, name: "2026 Soccer Fan Jerseys, Soccer Jersey for Men & Women - USA, Canada, Brazil, Argentina, France, Spain, Germany, England", image: "https://m.media-amazon.com/images/I/617fUbPfUVL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4vuoaop", asin: "" },
   { id: 56, name: "Italy 2026 World Cup Fan Soccer Jersey - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71oWNCMUGWL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xb58oL", asin: "" },
   { id: 57, name: "Women Sports Crop Tank Tops Mexico Football Summer Sleeveless Green Jersey Tops Workout Tee", image: "https://m.media-amazon.com/images/I/713SHgb0IYL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43S0ZZq", asin: "" },
+  { id: 58, name: "2026 Soccer BRAZIL Adult Supporter Kit – 7PCS National Team Fan Accessories with Wig Hair Clip, Bracelets & Patriotic Face Decals for Stadium Events & Game Day (BRAZIL)", image: "https://m.media-amazon.com/images/I/717bT36xfKL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4vBiauk", asin: "" },
 ]
 
 export default products

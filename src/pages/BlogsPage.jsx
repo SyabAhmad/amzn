@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import posts from "../data/posts"
 import RandomProducts from "../components/RandomProducts"
+import BigPosterFive from "../components/BigPosterFive"
 
 const BlogsPage = () => {
   useEffect(() => {
@@ -56,6 +57,7 @@ const BlogsPage = () => {
           ))}
         </div>
       </div>
+      <BigPosterFive />
       <RandomProducts title="Shop the Blog" count={12} />
     </main>
   )
