@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import posts from "../data/posts"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
+import BigPosterSix from "../components/BigPosterSix"
 
 const FIFANewsPage = () => {
   useEffect(() => {
@@ -97,6 +98,7 @@ const FIFANewsPage = () => {
         </div>
       </div>
       <BigPosterFive />
+      <BigPosterSix />
       <RandomProducts title="Trending Gear" count={12} />
     </main>
   )

@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
+import BigPosterSix from "../components/BigPosterSix"
 
 const FIFAKnockoutPage = () => {
   useEffect(() => {
@@ -80,6 +81,7 @@ const FIFAKnockoutPage = () => {
         </div>
       </div>
       <BigPosterFive />
+      <BigPosterSix />
       <RandomProducts title="Knockout Stage Gear" count={12} />
     </main>
   )

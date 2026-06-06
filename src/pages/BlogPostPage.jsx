@@ -4,6 +4,7 @@ import posts from "../data/posts"
 import products from "../data/products"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
+import BigPosterSix from "../components/BigPosterSix"
 
 const BlogPostPage = () => {
   const { slug } = useParams()
@@ -99,6 +100,7 @@ const BlogPostPage = () => {
         )}
       </div>
       <BigPosterFive />
+      <BigPosterSix />
       <RandomProducts title="More to Explore" count={12} />
     </main>
   )

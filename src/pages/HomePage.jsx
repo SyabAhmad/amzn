@@ -2,6 +2,7 @@ import HeroSection from "../components/HeroSection"
 import ProductMarquee from "../components/ProductMarquee"
 import BigPoster from "../components/BigPoster"
 import BigPosterFive from "../components/BigPosterFive"
+import BigPosterSix from "../components/BigPosterSix"
 import ProductsGrid from "../components/ProductsGrid"
 import SocialProof from "../components/SocialProof"
 import HotProducts from "../components/HotProducts"
@@ -19,6 +20,7 @@ const HomePage = () => {
       <BigPosterFive />
       <HotProducts />
       <WhyThisSite />
+      <BigPosterSix />
       <FinalCTA />
     </>
   )

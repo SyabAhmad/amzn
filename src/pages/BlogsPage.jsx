@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import posts from "../data/posts"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
+import BigPosterSix from "../components/BigPosterSix"
 
 const BlogsPage = () => {
   useEffect(() => {
@@ -58,6 +59,7 @@ const BlogsPage = () => {
         </div>
       </div>
       <BigPosterFive />
+      <BigPosterSix />
       <RandomProducts title="Shop the Blog" count={12} />
     </main>
   )

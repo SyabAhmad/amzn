@@ -57,6 +57,10 @@ const products = [
   { id: 56, name: "Italy 2026 World Cup Fan Soccer Jersey - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71oWNCMUGWL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xb58oL", asin: "" },
   { id: 57, name: "Women Sports Crop Tank Tops Mexico Football Summer Sleeveless Green Jersey Tops Workout Tee", image: "https://m.media-amazon.com/images/I/713SHgb0IYL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43S0ZZq", asin: "" },
   { id: 58, name: "2026 Soccer BRAZIL Adult Supporter Kit – 7PCS National Team Fan Accessories with Wig Hair Clip, Bracelets & Patriotic Face Decals for Stadium Events & Game Day (BRAZIL)", image: "https://m.media-amazon.com/images/I/717bT36xfKL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4vBiauk", asin: "" },
+  { id: 59, name: "2026 Soccer Fan Edition 18 oz Water Bottle – Canada USA Mexico Host Countries Souvenir – Vacuum Insulated Stainless Steel Sports Flask with Leak-Proof Spout Lid – Best Gift for Football Enthusiasts", image: "https://m.media-amazon.com/images/I/81CD9jZv1jL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/3QlL7v8", asin: "" },
+  { id: 60, name: "Soccer FIFA World Cup 2026 14oz Sculpted Relief Mug – Bold Ceramic Coffee Cup With Raised Design – Great Gift For Soccer Fans & Collectors", image: "https://m.media-amazon.com/images/I/71WihtEfLNL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/3So9JE4", asin: "" },
+  { id: 61, name: "2026 World Soccer Cup Folding Fans – Soccer Game Day Essentials for Stadium Chants, Party Favors, Gifts & Accessories, Portugal Jersey Outfit for Women Men – One Size", image: "https://m.media-amazon.com/images/I/81phBQ8VgmL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4erBT9P", asin: "" },
+  { id: 62, name: "2026 World Soccer Cup Soccer Bracelets for Women Men, Stackable Soccer Jewelry Game Day Fan Accessories Gifts for USA Mexico Argentina Soccer Fans", image: "https://m.media-amazon.com/images/I/81DJExSTIzL._AC_SY500_.jpg", amazonUrl: "https://amzn.to/4dTpmvO", asin: "" },
 ]
 
 export default products
