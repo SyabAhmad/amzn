@@ -23,6 +23,8 @@ const products = [
   { id: 22, name: "LIKSMU Heart Sunglasses for Women Trendy Cat Eye Love Shaped Sunglasses Vintage Lovely Retro Cute Sun Glasses", image: "https://m.media-amazon.com/images/I/71pH9zPxPyL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xrKXTV", asin: "" },
   { id: 23, name: "CeraVe Hydrating Mineral Sunscreen SPF 30 with Sheer Tint, Tinted Mineral Sunscreen with Zinc Oxide & Titanium Dioxide", image: "https://m.media-amazon.com/images/I/71PN6SSqJlL._SX679_.jpg", amazonUrl: "https://amzn.to/4uiy77w", asin: "" },
   { id: 24, name: "KALIYADI Womens-Sunglasses Polarized Sunglasses-Womens Trendy: Retro Sun Glasses with UV Protection for Travel Driving", image: "https://m.media-amazon.com/images/I/81UaQObWvQL._AC_SX569_.jpg", amazonUrl: "https://amzn.to/4erfae1", asin: "" },
+  { id: 25, name: "Samsung 14\" Galaxy Chromebook Go Laptop PC Computer, Intel Celeron N4500 Processor, 4GB RAM, 64GB Storage, ChromeOS, Student Laptop, Silver", image: "https://m.media-amazon.com/images/I/61N7iN2CvmL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4oeDoM7", asin: "" },
+  { id: 26, name: "Google Pixel 9a with Gemini - Unlocked Android Smartphone with Incredible Camera and AI Photo Editing, All-Day Battery, and Powerful Security - Obsidian - 128 GB", image: "https://m.media-amazon.com/images/I/61jNlUYC3mL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/43CZRch", asin: "" },
 ]
 
 export default products
