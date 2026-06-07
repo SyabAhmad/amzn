@@ -1,8 +1,10 @@
 import HeroSection from "../components/HeroSection"
 import ProductMarquee from "../components/ProductMarquee"
+import TrendingTopics from "../components/TrendingTopics"
 import BigPoster from "../components/BigPoster"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import BigPosterSeven from "../components/BigPosterSeven"
 import ProductsGrid from "../components/ProductsGrid"
 import SocialProof from "../components/SocialProof"
 import HotProducts from "../components/HotProducts"
@@ -46,7 +48,9 @@ const HomePage = () => {
     <>
       <HeroSection />
       <ProductMarquee />
+      <TrendingTopics />
       <BigPoster />
+      <BigPosterSeven />
       <ProductsGrid />
       <SocialProof />
       <BigPosterFive />

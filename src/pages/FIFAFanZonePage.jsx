@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import BigPosterSeven from "../components/BigPosterSeven"
 import useSEO from "../hooks/useSEO"
 import { buildBreadcrumbSchema } from "../utils/schemas"
 
@@ -92,6 +93,7 @@ const FIFAFanZonePage = () => {
       </div>
       <BigPosterFive />
       <BigPosterSix />
+      <BigPosterSeven />
       <RandomProducts title="Fan Zone Must-Haves" count={12} />
     </main>
   )

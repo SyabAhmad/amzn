@@ -74,6 +74,12 @@ const products = [
   { id: 73, name: "France FIFA World Cup 2026 Women's Official Country Short Sleeve Performance Jersey", image: "https://m.media-amazon.com/images/I/81c0CagUkXL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4v1T2Nu", asin: "" },
   { id: 74, name: "Men's #17 Japanese Baseball Jersey 90S Hip Hop Japan Baseball Jerseys Sports Shirts Stitched", image: "https://m.media-amazon.com/images/I/71sOKTwPATL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43O5bcG", asin: "" },
   { id: 75, name: "Japan Football/Soccer Jersey 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/51mslu9ZdKL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/3RRdlyh", asin: "" },
+  { id: 76, name: "Pudaier Freckle Stamp Pen, Waterproof Fake Freckles Makeup, Natural-Looking Long-Lasting Freckle Makeup, 5-Point Quick Dry Faux Freckle Stain Tool for Sunkissed Makeup, Caramel", image: "https://m.media-amazon.com/images/I/71gHNGxWSuL._SL1500_.jpg", amazonUrl: "https://amzn.to/4x47Qwe", asin: "" },
+  { id: 77, name: "South Korea National Team Football/Soccer Jersey 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/51fy7U2btML._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4vzx9Vr", asin: "" },
+  { id: 78, name: "South Korea Soccer Jersey Men Women, Korea Jersey Soccer Fan Apparel, Korean Football Shirt for Stadium", image: "https://m.media-amazon.com/images/I/71W2FbdeiHL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43TaJ5G", asin: "" },
+  { id: 79, name: "Germany Football/Soccer Jersey | National Team Supporter's Edition 2026 (White | Brown) Men", image: "https://m.media-amazon.com/images/I/51pZNuBi1HL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xft1vr", asin: "" },
+  { id: 80, name: "China Football/Soccer Jersey | National Team Supporter's Edition 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/81SPuOqgsvL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43RVREB", asin: "" },
+  { id: 81, name: "Egypt National Team Football/Soccer Jersey 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/71d616T2iML._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4fuUxyL", asin: "" },
 ]
 
 export default products

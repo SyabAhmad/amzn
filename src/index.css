@@ -19,7 +19,7 @@
 }
 
 .marquee-track {
-  animation: marquee 40s linear infinite;
+  animation: marquee 80s linear infinite;
   width: max-content;
 }
 
