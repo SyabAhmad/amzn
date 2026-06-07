@@ -73,10 +73,6 @@ const Footer = () => {
             <span className="text-lg font-extrabold text-white">
               FIFA<span className="text-brand">26</span>
             </span>
-            <span className="text-zinc-600 text-sm hidden sm:inline">|</span>
-            <span className="text-zinc-500 text-xs">
-              Affiliate Site — As an Amazon Associate we earn from qualifying purchases.
-            </span>
           </div>
 
           <p className="text-zinc-600 text-xs">© {year} FIFA26 Store</p>

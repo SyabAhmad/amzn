@@ -80,6 +80,7 @@ const products = [
   { id: 79, name: "Germany Football/Soccer Jersey | National Team Supporter's Edition 2026 (White | Brown) Men", image: "https://m.media-amazon.com/images/I/51pZNuBi1HL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4xft1vr", asin: "" },
   { id: 80, name: "China Football/Soccer Jersey | National Team Supporter's Edition 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/81SPuOqgsvL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43RVREB", asin: "" },
   { id: 81, name: "Egypt National Team Football/Soccer Jersey 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/71d616T2iML._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4fuUxyL", asin: "" },
+  { id: 82, name: "Jouer Luminizing Glow Drops Serum with 7% Niacinamide | Mix 2-3 Drops With Moisturizer or Foundation For A Summer Glow, Use With or Without Makeup, 1 fl oz", image: "https://m.media-amazon.com/images/I/813v96RBUPL._SL1500_.jpg", amazonUrl: "https://amzn.to/4uPTmi0", asin: "" },
 ]
 
 export default products
