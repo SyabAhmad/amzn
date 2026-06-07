@@ -4,18 +4,29 @@ import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
 import BigPosterSeven from "../components/BigPosterSeven"
 import useSEO from "../hooks/useSEO"
-import { buildBreadcrumbSchema } from "../utils/schemas"
+import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schemas"
 
 const FIFAKnockoutPage = () => {
+  const faqs = [
+    { q: "When does the FIFA 2026 knockout stage start?", a: "The knockout stage begins on June 28, 2026, with the Round of 32 matches." },
+    { q: "How many teams make the knockout stage?", a: "32 teams qualify from the group stage — the top 2 from each of the 12 groups plus the 8 best third-placed teams." },
+    { q: "What happens if a knockout match is tied after 90 minutes?", a: "Two 15-minute extra time periods are played. If still tied, a penalty shootout decides the winner." },
+    { q: "Where is the FIFA 2026 final played?", a: "The final will be at MetLife Stadium in New York/New Jersey on July 19, 2026." },
+    { q: "Is there a third-place match in FIFA 2026?", a: "Yes, the third-place match is on July 18, 2026, at Hard Rock Stadium in Miami." },
+  ]
+
   useSEO({
     title: "FIFA 2026 Knockout Stage | Round of 32, 16, QF, SF, Final",
     description: "FIFA 2026 knockout stage: Round of 32, Round of 16, Quarterfinals, Semifinals, and the Final. Single-elimination drama from June 28 – July 19, 2026.",
     path: "/fifa-knockout",
     keywords: "fifa knockout, fifa 2026 knockout, fifa 2026 knockout stage, world cup knockout, fifa round of 16, fifa quarterfinals, fifa semifinals, fifa 2026 final, fifa elimination",
-    jsonLd: buildBreadcrumbSchema([
-      { name: "Home", url: "https://fifa26.page/" },
-      { name: "FIFA 2026 Knockout", url: "https://fifa26.page/fifa-knockout" },
-    ]),
+    jsonLd: {
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "FIFA 2026 Knockout", url: "https://fifa26.page/fifa-knockout" },
+      ]),
+      ...buildFAQSchema(faqs),
+    },
     jsonLdId: "knockout-jsonld",
   })
 
@@ -87,6 +98,23 @@ const FIFAKnockoutPage = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-2xl sm:text-3xl font-black text-white text-center mb-10">Frequently Asked Questions</h2>
+          <div className="max-w-2xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="bg-surface-2 border border-zinc-800 rounded-xl overflow-hidden group">
+                <summary className="p-5 cursor-pointer list-none flex items-center justify-between">
+                  <span className="text-white font-semibold text-lg pr-4">{faq.q}</span>
+                  <svg className="w-5 h-5 text-brand shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-zinc-400 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
       <BigPosterFive />

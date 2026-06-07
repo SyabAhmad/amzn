@@ -4,18 +4,29 @@ import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
 import BigPosterSeven from "../components/BigPosterSeven"
 import useSEO from "../hooks/useSEO"
-import { buildBreadcrumbSchema } from "../utils/schemas"
+import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schemas"
 
 const FIFACommunityPage = () => {
+  const faqs = [
+    { q: "How do I join the FIFA 2026 community?", a: "Join our Discord server, Reddit community (r/FIFA2026Community), or Telegram groups linked on this page to connect with fans worldwide." },
+    { q: "Are there official FIFA 2026 fan events?", a: "Yes, FIFA organizes official fan festivals in host cities. Check the FIFA website for announcements about Fan Fest locations and dates." },
+    { q: "Can I create my own FIFA 2026 fan group?", a: "Absolutely! Many fans create local supporter groups. Use social media to find others in your area and organize meetups." },
+    { q: "Where can I discuss matches live during FIFA 2026?", a: "Our Discord has real-time match threads, voice channels, and dedicated channels for each match." },
+    { q: "How do I find fans from my country?", a: "Visit the Fan Groups page to find country-specific communities and connect with fellow supporters." },
+  ]
+
   useSEO({
     title: "FIFA 2026 Community | Fan Forum, Discussions & World Cup Groups",
     description: "Join the global FIFA 2026 fan community. Match discussions, fan groups, predictions, supporter meetups, Discord servers, Reddit communities, and Telegram groups for World Cup 2026 fans.",
     path: "/fifa-community",
     keywords: "fifa community, fifa 2026 community, world cup community, fifa fan forum, fifa discord, fifa reddit, fifa telegram, fifa fan groups, fifa match discussions, fifa supporters",
-    jsonLd: buildBreadcrumbSchema([
-      { name: "Home", url: "https://fifa26.page/" },
-      { name: "FIFA 2026 Community", url: "https://fifa26.page/fifa-community" },
-    ]),
+    jsonLd: {
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "FIFA 2026 Community", url: "https://fifa26.page/fifa-community" },
+      ]),
+      ...buildFAQSchema(faqs),
+    },
     jsonLdId: "community-jsonld",
   })
 
@@ -123,6 +134,23 @@ const FIFACommunityPage = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-2xl sm:text-3xl font-black text-white text-center mb-10">Frequently Asked Questions</h2>
+          <div className="max-w-2xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="bg-surface-2 border border-zinc-800 rounded-xl overflow-hidden group">
+                <summary className="p-5 cursor-pointer list-none flex items-center justify-between">
+                  <span className="text-white font-semibold text-lg pr-4">{faq.q}</span>
+                  <svg className="w-5 h-5 text-brand shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-zinc-400 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
       <BigPosterFive />

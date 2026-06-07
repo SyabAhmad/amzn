@@ -81,6 +81,11 @@ const products = [
   { id: 80, name: "China Football/Soccer Jersey | National Team Supporter's Edition 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/81SPuOqgsvL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43RVREB", asin: "" },
   { id: 81, name: "Egypt National Team Football/Soccer Jersey 2026 (Home and Away)", image: "https://m.media-amazon.com/images/I/71d616T2iML._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4fuUxyL", asin: "" },
   { id: 82, name: "Jouer Luminizing Glow Drops Serum with 7% Niacinamide | Mix 2-3 Drops With Moisturizer or Foundation For A Summer Glow, Use With or Without Makeup, 1 fl oz", image: "https://m.media-amazon.com/images/I/813v96RBUPL._SL1500_.jpg", amazonUrl: "https://amzn.to/4uPTmi0", asin: "" },
+  { id: 83, name: "Colorescience Sunforgettable Total Protection Color Balm SPF 50, Mineral, Broad Spectrum, Buildable Lip & Cheek Color", image: "https://m.media-amazon.com/images/I/81r5TYbqQEL._SL1500_.jpg", amazonUrl: "https://amzn.to/4uFhIKJ", asin: "" },
+  { id: 84, name: "CeraVe Hydrating Mineral Sunscreen SPF 30 with Sheer Tint, Tinted Mineral Sunscreen with Zinc Oxide & Titanium Dioxide, Blends Seamlessly For Healthy Glow, Deep, 1.7 Oz", image: "https://m.media-amazon.com/images/I/41D05nXmd4L._MCnd_AC_.jpg", amazonUrl: "https://amzn.to/4ujnzoI", asin: "" },
+  { id: 85, name: "Neutrogena Ultra Sheer Dry-Touch Sunscreen Lotion SPF 70, Broad Spectrum, Water Resistant 80 Min, Oil-Free, Oxybenzone-Free, Non-Comedogenic, Matte Finish, Body Sunscreen, Travel Size 3 Fl Oz", image: "https://m.media-amazon.com/images/I/81twRz4UWfL._SL1500_.jpg", amazonUrl: "https://amzn.to/4azjHIZ", asin: "" },
+  { id: 86, name: "ILIA - Super Serum Skin Tint SPF 40 | Non-Comedogenic, Vegan, Lightweight to Help Against Blue Light, + Pollution while Hydrating, Smoothing, + Refining (Formosa ST4, 1 fl oz | 30 ml)", image: "https://m.media-amazon.com/images/I/91SyqDIloDL._SL1500_.jpg", amazonUrl: "https://amzn.to/4vzLNvW", asin: "" },
+  { id: 87, name: "HOMEXCEL Microfiber Cleaning Cloth 210GSM, Pack of 12, Size: 11.5\" x 11.5\", Ultra-Soft, High-Density Non-Abrasive Cleaning Towels for Cars, Glass, Kitchen, Reusable Rags, Blue/Green/Yellow/Pink", image: "https://m.media-amazon.com/images/I/71NUTTfvulL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4etk2iN", asin: "" },
 ]
 
 export default products

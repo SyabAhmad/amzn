@@ -49,6 +49,10 @@ const useSEO = ({
   keywords,
   jsonLd,
   jsonLdId = "page-jsonld",
+  publishedTime,
+  author,
+  section,
+  hreflang,
 }) => {
   useEffect(() => {
     const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | FIFA 2026 World Cup Gear, Tickets & News`
@@ -59,7 +63,7 @@ const useSEO = ({
     document.title = fullTitle
 
     setMeta("name", "description", finalDesc)
-    if (keywords) setMeta("name", "keywords", finalKeywords)
+    setMeta("name", "keywords", finalKeywords)
     setLink("canonical", url)
 
     setMeta("property", "og:title", fullTitle)
@@ -70,10 +74,22 @@ const useSEO = ({
     setMeta("property", "og:site_name", SITE_NAME)
     setMeta("property", "og:locale", "en_US")
 
+    if (publishedTime) setMeta("property", "article:published_time", publishedTime)
+    if (author) setMeta("property", "article:author", author)
+    if (section) setMeta("property", "article:section", section)
+
     setMeta("name", "twitter:card", "summary_large_image")
     setMeta("name", "twitter:title", fullTitle)
     setMeta("name", "twitter:description", finalDesc)
     setMeta("name", "twitter:image", image)
+
+    if (hreflang) {
+      Object.entries(hreflang).forEach(([lang, href]) => {
+        setLink("alternate", href)
+        const el = document.head.querySelector(`link[rel="alternate"][hreflang="${lang}"]`)
+        if (el) el.setAttribute("hreflang", lang)
+      })
+    }
 
     if (jsonLd) injectJsonLd(jsonLdId, jsonLd)
     else removeJsonLd(jsonLdId)
@@ -83,7 +99,7 @@ const useSEO = ({
     return () => {
       removeJsonLd(jsonLdId)
     }
-  }, [title, description, path, image, type, keywords, jsonLd, jsonLdId])
+  }, [title, description, path, image, type, keywords, jsonLd, jsonLdId, publishedTime, author, section, hreflang])
 }
 
 export default useSEO

@@ -39,7 +39,7 @@ export const buildBreadcrumbSchema = (items) => ({
   })),
 })
 
-export const buildProductSchema = ({ name, description, image, url, brand = "Various", sku }) => ({
+export const buildProductSchema = ({ name, description, image, url, brand = "Various", sku, price }) => ({
   "@context": "https://schema.org",
   "@type": "Product",
   "name": name,
@@ -51,7 +51,7 @@ export const buildProductSchema = ({ name, description, image, url, brand = "Var
     "@type": "Offer",
     "url": url,
     "priceCurrency": "USD",
-    "price": "0",
+    "price": price ? String(price) : "0",
     "availability": "https://schema.org/InStock",
     "priceValidUntil": "2026-12-31",
   },

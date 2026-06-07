@@ -4,18 +4,29 @@ import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
 import BigPosterSeven from "../components/BigPosterSeven"
 import useSEO from "../hooks/useSEO"
-import { buildBreadcrumbSchema } from "../utils/schemas"
+import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schemas"
 
 const FIFAHostCitiesPage = () => {
+  const faqs = [
+    { q: "How many host cities are there for FIFA 2026?", a: "There are 16 host cities across 11 metropolitan areas in 3 countries (USA, Mexico, Canada)." },
+    { q: "Which stadium will host the FIFA 2026 final?", a: "MetLife Stadium in New York/New Jersey will host the final match of FIFA World Cup 2026." },
+    { q: "Which stadium has the largest capacity for FIFA 2026?", a: "Estadio Azteca in Mexico City has the largest capacity at 87,000 seats." },
+    { q: "When should I book accommodation for FIFA 2026?", a: "Book 6-12 months in advance as prices surge closer to the tournament. Use FIFA's official accommodation portal first." },
+    { q: "Are there fan zones in host cities?", a: "Yes, each host city will have official FIFA Fan Zones with free public viewing, live entertainment, and fan activities." },
+  ]
+
   useSEO({
     title: "FIFA 2026 Host Cities | 16 Stadiums, USA, Mexico & Canada",
     description: "All 16 FIFA 2026 host stadiums across 11 cities in USA, Mexico, and Canada. Capacity, location, travel tips, fan zones, accommodation, and best places to stay for each host city.",
     path: "/fifa-host-cities",
     keywords: "fifa host cities, fifa 2026 host cities, world cup 2026 host cities, fifa 2026 stadiums, metlife stadium, estadio azteca, fifa 2026 venues, fifa stadium guide, fifa 2026 usa cities, fifa 2026 mexico cities, fifa 2026 canada cities",
-    jsonLd: buildBreadcrumbSchema([
-      { name: "Home", url: "https://fifa26.page/" },
-      { name: "FIFA 2026 Host Cities", url: "https://fifa26.page/fifa-host-cities" },
-    ]),
+    jsonLd: {
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "FIFA 2026 Host Cities", url: "https://fifa26.page/fifa-host-cities" },
+      ]),
+      ...buildFAQSchema(faqs),
+    },
     jsonLdId: "hostcities-jsonld",
   })
 
@@ -101,6 +112,23 @@ const FIFAHostCitiesPage = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-2xl sm:text-3xl font-black text-white text-center mb-10">Frequently Asked Questions</h2>
+          <div className="max-w-2xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="bg-surface-2 border border-zinc-800 rounded-xl overflow-hidden group">
+                <summary className="p-5 cursor-pointer list-none flex items-center justify-between">
+                  <span className="text-white font-semibold text-lg pr-4">{faq.q}</span>
+                  <svg className="w-5 h-5 text-brand shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-zinc-400 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
       <BigPosterFive />

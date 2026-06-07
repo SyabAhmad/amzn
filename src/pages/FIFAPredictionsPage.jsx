@@ -4,18 +4,29 @@ import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
 import BigPosterSeven from "../components/BigPosterSeven"
 import useSEO from "../hooks/useSEO"
-import { buildBreadcrumbSchema } from "../utils/schemas"
+import { buildBreadcrumbSchema, buildFAQSchema } from "../utils/schemas"
 
 const FIFAPredictionsPage = () => {
+  const faqs = [
+    { q: "Who are the favorites to win FIFA 2026?", a: "Brazil, France, and Argentina are the top favorites based on current squad depth and recent tournament performances." },
+    { q: "Who could win the Golden Boot at FIFA 2026?", a: "Kylian Mbappé, Erling Haaland, and Vinícius Jr. are the leading contenders for top scorer." },
+    { q: "What is a dark horse team for FIFA 2026?", a: "Teams like Portugal, Netherlands, and Colombia have the talent to make deep runs as underdogs." },
+    { q: "How can I join the FIFA 2026 bracket challenge?", a: "Join our community on the FIFA Community page to participate in the official bracket challenge with prizes." },
+    { q: "When are predictions usually released?", a: "Expert predictions typically finalize after the group draw and friendlies in early 2026, but our fan bracket is open now." },
+  ]
+
   useSEO({
     title: "FIFA 2026 Predictions | Bracket, Winner, Top Scorer & Betting Odds",
     description: "FIFA 2026 predictions: expert picks for the winner, golden boot race, dark horses, group stage predictions, knockout bracket, betting odds, and fan bracket challenge.",
     path: "/fifa-predictions",
     keywords: "fifa 2026 predictions, fifa predictions, world cup predictions, fifa bracket, fifa 2026 winner, fifa golden boot, fifa 2026 picks, world cup bracket challenge, fifa dark horse, fifa betting odds",
-    jsonLd: buildBreadcrumbSchema([
-      { name: "Home", url: "https://fifa26.page/" },
-      { name: "FIFA 2026 Predictions", url: "https://fifa26.page/fifa-predictions" },
-    ]),
+    jsonLd: {
+      ...buildBreadcrumbSchema([
+        { name: "Home", url: "https://fifa26.page/" },
+        { name: "FIFA 2026 Predictions", url: "https://fifa26.page/fifa-predictions" },
+      ]),
+      ...buildFAQSchema(faqs),
+    },
     jsonLdId: "predictions-jsonld",
   })
 
@@ -90,6 +101,23 @@ const FIFAPredictionsPage = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </Link>
+        </div>
+
+        <div className="mt-16">
+          <h2 className="text-2xl sm:text-3xl font-black text-white text-center mb-10">Frequently Asked Questions</h2>
+          <div className="max-w-2xl mx-auto space-y-4">
+            {faqs.map((faq, i) => (
+              <details key={i} className="bg-surface-2 border border-zinc-800 rounded-xl overflow-hidden group">
+                <summary className="p-5 cursor-pointer list-none flex items-center justify-between">
+                  <span className="text-white font-semibold text-lg pr-4">{faq.q}</span>
+                  <svg className="w-5 h-5 text-brand shrink-0 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-5 pb-5 text-zinc-400 leading-relaxed">{faq.a}</div>
+              </details>
+            ))}
+          </div>
         </div>
       </div>
       <BigPosterFive />

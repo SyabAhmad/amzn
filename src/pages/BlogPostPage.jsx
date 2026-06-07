@@ -7,6 +7,10 @@ import BigPosterSix from "../components/BigPosterSix"
 import useSEO from "../hooks/useSEO"
 import { buildArticleSchema, buildBreadcrumbSchema } from "../utils/schemas"
 
+const SITE_URL = "https://fifa26.page"
+const SITE_NAME = "FIFA 2026 Store"
+const DEFAULT_IMAGE = "https://fifa26.page/og-image.png"
+
 const BlogPostPage = () => {
   const { slug } = useParams()
   const post = posts.find((p) => p.slug === slug)
@@ -15,21 +19,34 @@ const BlogPostPage = () => {
     title: post ? post.title : "Post Not Found",
     description: post ? post.excerpt : "FIFA 2026 blog post not found.",
     path: post ? `/blog/${post.slug}` : "/blog",
+    image: post ? post.image : DEFAULT_IMAGE,
+    type: "article",
     keywords: post ? post.tags.join(", ") : "fifa 2026 blog",
     jsonLd: post ? {
       ...buildArticleSchema({
         title: post.title,
         description: post.excerpt,
-        url: `https://fifa26.page/blog/${post.slug}`,
+        url: `${SITE_URL}/blog/${post.slug}`,
+        image: post.image || DEFAULT_IMAGE,
         datePublished: post.date,
+        author: SITE_NAME,
       }),
       ...buildBreadcrumbSchema([
-        { name: "Home", url: "https://fifa26.page/" },
-        { name: "Blog", url: "https://fifa26.page/blog" },
-        { name: post.title, url: `https://fifa26.page/blog/${post.slug}` },
+        { name: "Home", url: SITE_URL + "/" },
+        { name: "Blog", url: SITE_URL + "/blog" },
+        { name: post.title, url: `${SITE_URL}/blog/${post.slug}` },
       ]),
     } : null,
     jsonLdId: post ? `blog-${post.id}-jsonld` : "blog-notfound-jsonld",
+    publishedTime: post ? new Date(post.date).toISOString() : undefined,
+    author: SITE_NAME,
+    section: "FIFA 2026 News & Guides",
+    hreflang: post ? {
+      "en-us": `${SITE_URL}/blog/${post.slug}`,
+      "en-gb": `${SITE_URL}/blog/${post.slug}`,
+      "es-mx": `${SITE_URL}/blog/${post.slug}`,
+      "x-default": `${SITE_URL}/blog/${post.slug}`,
+    } : undefined,
   })
 
   if (!post) {

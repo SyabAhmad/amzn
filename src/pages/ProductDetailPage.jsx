@@ -5,6 +5,9 @@ import posts from "../data/posts"
 import useSEO from "../hooks/useSEO"
 import { buildProductSchema, buildBreadcrumbSchema } from "../utils/schemas"
 
+const SITE_URL = "https://fifa26.page"
+const SITE_NAME = "FIFA 2026 Store"
+
 const relatedPosts = posts.sort(() => Math.random() - 0.5).slice(0, 3)
 
 const ProductDetailPage = () => {
@@ -34,9 +37,17 @@ const ProductDetailPage = () => {
     title: product ? product.name.slice(0, 60) : "Product Not Found",
     description: product ? `Buy ${product.name} on Amazon. ${product.name.slice(0, 100)}.` : "FIFA 2026 product.",
     path: product ? `/product/${product.id}` : "/",
+    image: product ? product.image : undefined,
+    type: "product",
     keywords: product ? `${product.name}, fifa 2026, ${product.tags?.join(", ") || "world cup gear"}` : "fifa 2026",
     jsonLd: productJsonLd,
     jsonLdId: `product-${id}-jsonld`,
+    hreflang: product ? {
+      "en-us": `${SITE_URL}/product/${product.id}`,
+      "en-gb": `${SITE_URL}/product/${product.id}`,
+      "es-mx": `${SITE_URL}/product/${product.id}`,
+      "x-default": `${SITE_URL}/product/${product.id}`,
+    } : undefined,
   })
 
   useEffect(() => {
