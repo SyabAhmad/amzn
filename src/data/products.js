@@ -99,6 +99,11 @@ const products = [
   { id: 98, name: "DIBEI Fan Soccer Jersey for 2026 World Cup - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71a7IgNdfNL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43mDWFV", asin: "" },
   { id: 99, name: "DIBEI Fan Soccer Jersey for 2026 World Cup - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71a7IgNdfNL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43TiqJ3", asin: "" },
   { id: 100, name: "Cnins Kids' Soccer Jersey Kit - Breathable Poly-Spandex, Quick-Dry - Perfect for Youth Futbol Training & Gifts (2T-14Y)", image: "https://m.media-amazon.com/images/I/71MPykRil5L._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4g13eks", asin: "" },
+  { id: 101, name: "Persona 5 Royal: Standard Edition - PlayStation 5", image: "https://m.media-amazon.com/images/I/819o7LKSYsL._SL1500_.jpg", amazonUrl: "https://amzn.to/3PN2HIn", asin: "" },
+  { id: 102, name: "Persona 3 Reload: Standard Edition - PlayStation 5", image: "https://m.media-amazon.com/images/I/81X12K0nzxL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4uj3nmH", asin: "" },
+  { id: 103, name: "Xbox Series S - All Digital Gaming Console - 512GB SSD - Includes Wireless Controller - 120FPS - Robot White", image: "https://m.media-amazon.com/images/I/71zRzUlkR2L._SL1500_.jpg", amazonUrl: "https://amzn.to/3QuvuBA", asin: "" },
+  { id: 104, name: "MENEEA Upgraded Charger-Stand Cooling-Fan for Xbox Series X, Dual Wireless Charger Dock Cooler System for Xbox Controller& Console, Accessories with 11 RGB Light Modes, 2x1400mAh Rechargeable Batteries", image: "https://m.media-amazon.com/images/I/71WbFLSyQCL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4vsrKQ2", asin: "" },
+  { id: 105, name: "Family Emergency Kit | All-in-one Survival Kit Backpack for Earthquake, Flood, Disaster Relief, Civil Unrest & Outdoor - Survival Bag & Emergency Preparedness Kit for Families", image: "https://m.media-amazon.com/images/I/719pBPd6a-L._AC_SL1080_.jpg", amazonUrl: "https://amzn.to/4x65EV0", asin: "" },
 ]
 
 export default products
