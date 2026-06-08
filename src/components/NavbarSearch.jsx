@@ -1,6 +1,22 @@
 import { useEffect, useRef, useState } from "react"
 import products from "../data/products"
 
+const TRENDING_QUERIES = [
+  "Morocco vs Norway",
+  "المغرب ضد النرويج",
+  "Colombia vs Jordan",
+  "كولومبيا ضد الأردن",
+  "Croatia vs Slovenia",
+  "Brazil National Team",
+  "منتخب البرازيل لكرة القدم",
+  "Riyadh Air",
+  "طيران الرياض",
+  "Hong Kong vs Nepal",
+  "Neom",
+  "World Cup 2026 tickets",
+  "FIFA 2026 jersey",
+]
+
 const NavbarSearch = ({ onSelect, inputRef, onFocus, onChange, value }) => {
   const [focused, setFocused] = useState(false)
   const [internal, setInternal] = useState("")
@@ -111,34 +127,53 @@ const NavbarSearch = ({ onSelect, inputRef, onFocus, onChange, value }) => {
         </div>
       </form>
 
-      {focused && current && current.trim() && (
+      {focused && (
         <div className="absolute z-50 left-0 right-0 top-full mt-2 bg-surface-2/95 backdrop-blur-xl border border-zinc-700 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden">
-          {matches.length > 0 ? (
+          {current && current.trim() ? (
+            matches.length > 0 ? (
+              <div className="p-2">
+                <div className="px-3 py-2 text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Products</div>
+                {matches.map((p) => (
+                  <a
+                    key={p.id}
+                    href={`/product/${p.id}`}
+                    onClick={() => {
+                      setFocused(false)
+                      onSelect?.()
+                    }}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors group"
+                  >
+                    <img src={p.image} alt="" className="w-9 h-9 rounded-lg object-cover bg-zinc-900" loading="lazy" />
+                    <div className="flex-1 min-w-0">
+                      <div className="text-sm text-white font-medium truncate group-hover:text-brand">{p.name}</div>
+                      <div className="text-xs text-zinc-500">#{p.id}</div>
+                    </div>
+                    <svg className="w-4 h-4 text-zinc-600 group-hover:text-brand transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div className="p-5 text-center text-zinc-500 text-sm">No products found for "{current}"</div>
+            )
+          ) : (
             <div className="p-2">
-              <div className="px-3 py-2 text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Products</div>
-              {matches.map((p) => (
-                <a
-                  key={p.id}
-                  href={`/product/${p.id}`}
-                  onClick={() => {
-                    setFocused(false)
-                    onSelect?.()
-                  }}
-                  className="flex items-center gap-3 px-3 py-2.5 rounded-xl hover:bg-zinc-800 transition-colors group"
+              <div className="px-3 py-2 text-[10px] uppercase tracking-widest text-zinc-500 font-bold">Trending Searches</div>
+              {TRENDING_QUERIES.slice(0, 8).map((t, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCurrent(t)}
+                  className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-zinc-800 transition-colors text-left text-sm text-zinc-300"
                 >
-                  <img src={p.image} alt="" className="w-9 h-9 rounded-lg object-cover bg-zinc-900" loading="lazy" />
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-white font-medium truncate group-hover:text-brand">{p.name}</div>
-                    <div className="text-xs text-zinc-500">#{p.id}</div>
-                  </div>
-                  <svg className="w-4 h-4 text-zinc-600 group-hover:text-brand transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg className="w-4 h-4 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
-                </a>
+                  <span>{t}</span>
+                </button>
               ))}
             </div>
-          ) : (
-            <div className="p-5 text-center text-zinc-500 text-sm">No products found for "{current}"</div>
           )}
         </div>
       )}

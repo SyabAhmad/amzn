@@ -95,6 +95,10 @@ const products = [
   { id: 94, name: "Outerstuff FIFA World Cup 2026 Womens Spaghetti Strap Country Tank", image: "https://m.media-amazon.com/images/I/61-no6sZjvL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4ed8NtG", asin: "" },
   { id: 95, name: "REORIA Women's Sexy Halter Backless Double Lined Tank Top Y2k Trendy Camisole Crop Tops", image: "https://m.media-amazon.com/images/I/71081lheTZL._AC_SY741_.jpg", amazonUrl: "https://amzn.to/4vB6Jmh", asin: "" },
   { id: 96, name: "2026 Soccer Fan Kit Team Game Day Watch Party Tailgate Supplies Soccer Accessories Headband Scarf Flag", image: "https://m.media-amazon.com/images/I/81S4EYJsh0L._AC_SX569_.jpg", amazonUrl: "https://amzn.to/4uXGUNq", asin: "" },
+  { id: 97, name: "2026 World Cup Fan Soccer Jersey - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/710Hyq-ngvL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4uYHHO5", asin: "" },
+  { id: 98, name: "DIBEI Fan Soccer Jersey for 2026 World Cup - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71a7IgNdfNL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43mDWFV", asin: "" },
+  { id: 99, name: "DIBEI Fan Soccer Jersey for 2026 World Cup - France, Germany, England, Spain, Croatia & Portugal", image: "https://m.media-amazon.com/images/I/71a7IgNdfNL._AC_SX679_.jpg", amazonUrl: "https://amzn.to/43TiqJ3", asin: "" },
+  { id: 100, name: "Cnins Kids' Soccer Jersey Kit - Breathable Poly-Spandex, Quick-Dry - Perfect for Youth Futbol Training & Gifts (2T-14Y)", image: "https://m.media-amazon.com/images/I/71MPykRil5L._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4g13eks", asin: "" },
 ]
 
 export default products
