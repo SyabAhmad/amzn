@@ -41,6 +41,7 @@ const Navbar = () => {
     { label: "Community", to: "/fifa-community" },
     { label: "Matches", to: "/fifa-matches" },
     { label: "Tickets", to: "/fifa-tickets" },
+    { label: "Watch Live", to: "/fifa-watch-live" },
     { label: "News", to: "/fifa-news" },
     { label: "Blog", to: "/blog" },
     { label: "About", to: "/about" },

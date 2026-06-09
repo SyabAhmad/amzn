@@ -19,6 +19,7 @@ import FIFAGroupStagePage from "./pages/FIFAGroupStagePage"
 import FIFAKnockoutPage from "./pages/FIFAKnockoutPage"
 import FIFAFanGroupsPage from "./pages/FIFAFanGroupsPage"
 import FIFAWorldCupSchedulePage from "./pages/FIFAWorldCupSchedulePage"
+import FIFAWAtchLivePage from "./pages/FIFAWAtchLivePage"
 import AboutPage from "./pages/AboutPage"
 import ContactPage from "./pages/ContactPage"
 
@@ -45,6 +46,7 @@ function App() {
         <Route path="/fifa-knockout" element={<FIFAKnockoutPage />} />
         <Route path="/fifa-fan-groups" element={<FIFAFanGroupsPage />} />
         <Route path="/fifa-world-cup-schedule" element={<FIFAWorldCupSchedulePage />} />
+        <Route path="/fifa-watch-live" element={<FIFAWAtchLivePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

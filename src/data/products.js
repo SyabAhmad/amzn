@@ -104,6 +104,10 @@ const products = [
   { id: 103, name: "Xbox Series S - All Digital Gaming Console - 512GB SSD - Includes Wireless Controller - 120FPS - Robot White", image: "https://m.media-amazon.com/images/I/71zRzUlkR2L._SL1500_.jpg", amazonUrl: "https://amzn.to/3QuvuBA", asin: "" },
   { id: 104, name: "MENEEA Upgraded Charger-Stand Cooling-Fan for Xbox Series X, Dual Wireless Charger Dock Cooler System for Xbox Controller& Console, Accessories with 11 RGB Light Modes, 2x1400mAh Rechargeable Batteries", image: "https://m.media-amazon.com/images/I/71WbFLSyQCL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4vsrKQ2", asin: "" },
   { id: 105, name: "Family Emergency Kit | All-in-one Survival Kit Backpack for Earthquake, Flood, Disaster Relief, Civil Unrest & Outdoor - Survival Bag & Emergency Preparedness Kit for Families", image: "https://m.media-amazon.com/images/I/719pBPd6a-L._AC_SL1080_.jpg", amazonUrl: "https://amzn.to/4x65EV0", asin: "" },
+  { id: 106, name: "LOVEVOOK Laptop Backpack for Women with Pouch Pocket for Large Capacity Cup, 15.6 Inch Laptop Computer Bag Travel Backpack Purse, Waterproof Work Business Backpack College Teacher Bags, Beige-Black-Brown", image: "https://m.media-amazon.com/images/I/61sufLjWbHL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4e5M83L", asin: "" },
+  { id: 107, name: "FIFA 2026 Stadium Clear Carry All Bag - Stadium Approved, Fashionable Bag To Carry Wallet Phone - Lightweight 12\" × 12\" × 6\"", image: "https://m.media-amazon.com/images/I/91JL8wjrv4L._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4odi35s", asin: "" },
+  { id: 108, name: "Outerstuff World Cup Soccer Boys Mascot Jersey", image: "https://m.media-amazon.com/images/I/61rPwsOaD3L._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4ajmVAi", asin: "" },
+  { id: 109, name: "FIFA World CUP26 Host Country Mascots Action T-Shirt", image: "https://m.media-amazon.com/images/I/A1dbsmzbGeL._CLa%7C2140%2C2000%7C8151QxQmQqL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png", amazonUrl: "https://amzn.to/3Q5BMaO", asin: "" },
 ]
 
 export default products
