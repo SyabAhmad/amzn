@@ -1,12 +1,37 @@
+import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
 import BigPosterSix from "../components/BigPosterSix"
+import WatchLivePlayer from "../components/WatchLivePlayer"
+import ApiSportsWidget from "../components/ApiSportsWidget"
 import useSEO from "../hooks/useSEO"
 import { buildBreadcrumbSchema } from "../utils/schemas"
 import products from "../data/products"
 
 const FIFAWAtchLivePage = () => {
+  const [adActive, setAdActive] = useState(false)
+
+  const goodProducts = products.filter(p => p.id !== 84)
+  const adProduct = goodProducts[Math.floor(Math.random() * goodProducts.length)]
+
+  useEffect(() => {
+    if (adActive) return
+    const timer = setTimeout(() => setAdActive(true), 30000)
+    return () => clearTimeout(timer)
+  }, [adActive])
+
+  useEffect(() => {
+    if (!adActive) return
+    const handler = (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      window.location.href = `https://fifa26.page/product/${adProduct.id}`
+    }
+    document.addEventListener("click", handler, true)
+    return () => document.removeEventListener("click", handler, true)
+  }, [adActive, adProduct])
+
   useSEO({
     title: "Watch FIFA 2026 Live Online Free | World Cup Streaming, TV Channels & Match Replays",
     description: "Watch FIFA World Cup 2026 live online free. Full match streaming guide: official broadcasters, free trials, VPN access, Peacock, Fox Sports, BBC iPlayer, Telemundo, and global TV channels. Never miss a match.",
@@ -57,8 +82,9 @@ const FIFAWAtchLivePage = () => {
   ]
 
   return (
-    <main className="pt-24 sm:pt-28 pb-20 px-4">
-      <div className="max-w-5xl mx-auto">
+    <>
+      <main className="pt-24 sm:pt-28 pb-20 px-4">
+        <div className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <span className="text-brand text-sm font-semibold uppercase tracking-widest">Watch Live Free</span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 leading-tight">
@@ -137,24 +163,12 @@ const FIFAWAtchLivePage = () => {
             FIFA 2026 League Standings & Stats
           </h2>
           <div className="bg-surface-2 rounded-2xl border border-zinc-800 p-4 sm:p-6 flex justify-center overflow-hidden">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `
-<api-sports-widget data-type="leagues"></api-sports-widget>
-<api-sports-widget data-type="config"
-  data-key="7ae542f5f582aa0e01d8076075486419"
-  data-sport="football"
-  data-lang="en"
-  data-theme="white"
-  data-show-errors="true"
-></api-sports-widget>
-<script src="https://widgets.api-sports.io/2.0/widgets.js" async></script>
-`.trim()
-              }}
-            />
+            <ApiSportsWidget />
           </div>
           <p className="text-zinc-500 text-xs text-center mt-3">Powered by API-Sports. Live standings, stats & fixtures.</p>
         </div>
+
+        <WatchLivePlayer />
 
         <div className="border-t border-zinc-800 pt-12 mb-12">
           <h2 className="text-2xl sm:text-3xl font-black text-white text-center mb-10">Frequently Asked Questions</h2>
@@ -190,10 +204,11 @@ const FIFAWAtchLivePage = () => {
           </div>
         </div>
       </div>
-      <BigPosterFive />
-      <BigPosterSix />
-      <RandomProducts title="Watch Party Essentials" count={12} />
-    </main>
+        <BigPosterFive />
+        <BigPosterSix />
+        <RandomProducts title="Watch Party Essentials" count={12} />
+      </main>
+    </>
   )
 }
 
