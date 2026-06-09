@@ -108,6 +108,10 @@ const products = [
   { id: 107, name: "FIFA 2026 Stadium Clear Carry All Bag - Stadium Approved, Fashionable Bag To Carry Wallet Phone - Lightweight 12\" × 12\" × 6\"", image: "https://m.media-amazon.com/images/I/91JL8wjrv4L._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4odi35s", asin: "" },
   { id: 108, name: "Outerstuff World Cup Soccer Boys Mascot Jersey", image: "https://m.media-amazon.com/images/I/61rPwsOaD3L._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4ajmVAi", asin: "" },
   { id: 109, name: "FIFA World CUP26 Host Country Mascots Action T-Shirt", image: "https://m.media-amazon.com/images/I/A1dbsmzbGeL._CLa%7C2140%2C2000%7C8151QxQmQqL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png", amazonUrl: "https://amzn.to/3Q5BMaO", asin: "" },
+  { id: 110, name: "Amazon Fire TV Stick 4K Max | Streaming Device with Wi-Fi 6E, Dolby Vision, HDR10+, and Alexa Voice Remote", image: "https://m.media-amazon.com/images/I/51L1Hy2sY4L._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4e5M83L", asin: "" },
+  { id: 111, name: "HD Digital TV Antenna 360° Amplified, Ultra-Thin Durable Smart TV Antenna 250+ Miles Long Range Local Channel Reception for All TV's", image: "https://m.media-amazon.com/images/I/71E-cWWmlRL._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4e5M83L", asin: "" },
+  { id: 112, name: "Roku Ultra | Premium 4K HDR Streaming Player with Dolby Vision, Voice Remote Pro, and Rechargeable Remote", image: "https://m.media-amazon.com/images/I/51rxn5xqJ-L._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4e5M83L", asin: "" },
+  { id: 113, name: "Google Chromecast with Google TV 4K | Streaming Device with Dolby Vision and Google Assistant", image: "https://m.media-amazon.com/images/I/51Vq4N3G66L._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4e5M83L", asin: "" },
 ]
 
 export default products

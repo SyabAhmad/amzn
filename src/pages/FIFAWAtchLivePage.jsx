@@ -80,10 +80,8 @@ const FIFAWAtchLivePage = () => {
         </div>
 
         {jerseyProduct && (
-          <a
-            href={jerseyProduct.amazonUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={`/product/${jerseyProduct.id}`}
             className="block mb-12 p-5 sm:p-6 bg-gradient-to-r from-brand/10 via-amber-500/5 to-brand/10 border border-brand/30 rounded-2xl hover:border-brand/60 transition-all group"
           >
             <div className="flex items-center justify-between flex-wrap gap-3">
@@ -98,7 +96,7 @@ const FIFAWAtchLivePage = () => {
                 Shop Now →
               </span>
             </div>
-          </a>
+          </Link>
         )}
 
         <div className="border-t border-zinc-800 pt-12 mb-12">
