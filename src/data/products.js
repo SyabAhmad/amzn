@@ -108,6 +108,7 @@ const products = [
   { id: 107, name: "FIFA 2026 Stadium Clear Carry All Bag - Stadium Approved, Fashionable Bag To Carry Wallet Phone - Lightweight 12\" × 12\" × 6\"", image: "https://m.media-amazon.com/images/I/91JL8wjrv4L._AC_SL1500_.jpg", amazonUrl: "https://amzn.to/4odi35s", asin: "" },
   { id: 108, name: "Outerstuff World Cup Soccer Boys Mascot Jersey", image: "https://m.media-amazon.com/images/I/61rPwsOaD3L._AC_SX679_.jpg", amazonUrl: "https://amzn.to/4ajmVAi", asin: "" },
   { id: 109, name: "FIFA World CUP26 Host Country Mascots Action T-Shirt", image: "https://m.media-amazon.com/images/I/A1dbsmzbGeL._CLa%7C2140%2C2000%7C8151QxQmQqL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_SX679_.png", amazonUrl: "https://amzn.to/3Q5BMaO", asin: "" },
+  { id: 110, name: "LED Display Auto Cooling Fan for Xbox Series X with 9 RGB Light, Cooling System Adjustable by Temperature for Xbox Series X Console, Cooler & Light Switch, Headset Hook, USB Port", image: "https://m.media-amazon.com/images/I/719U6gHpPAL._SL1500_.jpg", amazonUrl: "https://amzn.to/4xCcSAD", asin: "" },
 ]
 
 export default products
