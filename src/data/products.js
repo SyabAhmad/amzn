@@ -1028,5 +1028,19 @@ const products = [
     amazonUrl: "https://amzn.to/43wfwKm",
     asin: "",
   },
+  {
+    id: 134,
+    name: "4 Pack Heart Shaped Sunglasses Trendy Cat Eye Love Heart Glasses Vintage Retro Heart Sunglasses for Women",
+    image: "https://m.media-amazon.com/images/I/51JlfYR6nrL._AC_SX569_.jpg",
+    amazonUrl: "https://amzn.to/4epIAIl",
+    asin: "",
+  },
+  {
+    id: 135,
+    name: "adidas Men's Tiro 23 League Pants",
+    image: "https://m.media-amazon.com/images/I/71yJTxtU1AL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/4efOJXr",
+    asin: "",
+  },
 ];
 export default products;
