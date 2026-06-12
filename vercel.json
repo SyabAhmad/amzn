@@ -5,18 +5,7 @@
       "destination": "/index.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "/shop",
-      "destination": "/#products",
-      "permanent": true
-    },
-    {
-      "source": "/deals",
-      "destination": "/#products",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "headers": [
     {
       "source": "/assets/(.*)",
