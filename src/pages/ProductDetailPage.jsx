@@ -6,7 +6,7 @@ import useSEO from "../hooks/useSEO"
 import { buildProductSchema, buildBreadcrumbSchema } from "../utils/schemas"
 
 const SITE_URL = "https://fifa26.page"
-const SITE_NAME = "FIFA 2026 Store"
+const SITE_NAME = "Trending Picks Hub"
 
 const relatedPosts = posts.sort(() => Math.random() - 0.5).slice(0, 3)
 
@@ -21,7 +21,7 @@ const ProductDetailPage = () => {
     return {
       ...buildProductSchema({
         name: product.name,
-        description: `Buy ${product.name} on Amazon. FIFA 2026 World Cup gear, official jerseys, fan accessories, and streetwear.`,
+        description: `Buy ${product.name} on Amazon. Check price, reviews, and fast shipping.`,
         image: product.image,
         url: `https://fifa26.page/product/${product.id}`,
         sku: product.asin || `fifa26-${product.id}`,
@@ -35,19 +35,13 @@ const ProductDetailPage = () => {
 
   useSEO({
     title: product ? product.name.slice(0, 60) : "Product Not Found",
-    description: product ? `Buy ${product.name} on Amazon. ${product.name.slice(0, 100)}.` : "FIFA 2026 product.",
+    description: product ? `Buy ${product.name} on Amazon. Check price, ratings, reviews, and fast shipping.` : "Product not found.",
     path: product ? `/product/${product.id}` : "/",
     image: product ? product.image : undefined,
     type: "product",
-    keywords: product ? `${product.name}, fifa 2026, ${product.tags?.join(", ") || "world cup gear"}` : "fifa 2026",
+    keywords: product ? `${product.name}, ${product.tags?.join(", ") || "amazon products, trending deals, shop online"}` : "products",
     jsonLd: productJsonLd,
     jsonLdId: `product-${id}-jsonld`,
-    hreflang: product ? {
-      "en-us": `${SITE_URL}/product/${product.id}`,
-      "en-gb": `${SITE_URL}/product/${product.id}`,
-      "es-mx": `${SITE_URL}/product/${product.id}`,
-      "x-default": `${SITE_URL}/product/${product.id}`,
-    } : undefined,
   })
 
   useEffect(() => {
@@ -97,7 +91,7 @@ const ProductDetailPage = () => {
 
           <div className="flex flex-col justify-center">
             <span className="text-brand text-xs font-semibold uppercase tracking-widest mb-3">
-              FIFA 2026 Collection
+              Featured Pick
             </span>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight mb-4">
               {product.name}
@@ -122,11 +116,9 @@ const ProductDetailPage = () => {
             </div>
 
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mb-8">
-              Shop the trending {product.name} — part of our exclusive FIFA 2026 collection.
-              Handpicked for football fans, streetwear enthusiasts, and World Cup 2026 supporters.
-              This premium football gear and fashion item is trending worldwide on TikTok, Pinterest, and social media.
-              Whether you're looking for match day essentials, casual streetwear, or the perfect gift
-              for the football lover in your life, this product delivers style, comfort, and performance.
+              Check price and availability for {product.name} on Amazon.
+              This trending product is popular on TikTok, Pinterest, and social media.
+              Whether you need it for yourself or as a gift, this item delivers quality and value.
               Available with fast global shipping through Amazon's trusted marketplace.
             </p>
 
@@ -171,7 +163,7 @@ const ProductDetailPage = () => {
               Suggested Products
             </h2>
             <p className="text-zinc-400 text-sm mt-2 max-w-xl mx-auto">
-              Discover more FIFA 2026 football gear, trending sneakers, jerseys, streetwear, and fan accessories.
+              Browse more trending products across fashion, beauty, home, and lifestyle.
             </p>
           </div>
 
@@ -202,7 +194,7 @@ const ProductDetailPage = () => {
               Related Guides
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-white mt-3">
-              Read Our FIFA 2026 Blog
+              Read Our Blog
             </h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">

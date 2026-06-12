@@ -1,27 +1,10 @@
-import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import products from "../data/products"
 
 const HERO_PRODUCT_IDS = [80, 81, 78]
 const FEATURED = HERO_PRODUCT_IDS.map((id) => products.find((p) => p.id === id)).filter(Boolean)
 
-const useCountdown = () => {
-  const target = new Date("2026-06-11T00:00:00Z").getTime()
-  const [now, setNow] = useState(Date.now())
-  useEffect(() => {
-    const t = setInterval(() => setNow(Date.now()), 1000)
-    return () => clearInterval(t)
-  }, [])
-  const diff = Math.max(0, target - now)
-  const d = Math.floor(diff / (1000 * 60 * 60 * 24))
-  const h = Math.floor((diff / (1000 * 60 * 60)) % 24)
-  const m = Math.floor((diff / (1000 * 60)) % 60)
-  const s = Math.floor((diff / 1000) % 60)
-  return { d, h, m, s }
-}
-
 const HeroSection = () => {
-  const { d, h, m, s } = useCountdown()
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-surface">
@@ -43,7 +26,7 @@ const HeroSection = () => {
           <div className="flex-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand/10 border border-brand/30 text-brand text-xs font-bold uppercase tracking-widest mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-              FIFA 2026 Collection Live
+              FIFA 2026 — Match Schedule
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight mb-5">
@@ -60,23 +43,23 @@ const HeroSection = () => {
               Authentic jerseys, sneakers, and streetwear from every nation playing in 2026. Hand-picked. Tested. Shipped by Amazon.
             </p>
 
-            <div className="grid grid-cols-4 gap-2 sm:gap-3 max-w-md mx-auto lg:mx-0 mb-8">
+            <div className="space-y-2.5 max-w-md mx-auto lg:mx-0 mb-8">
               {[
-                { v: d, l: "Days" },
-                { v: h, l: "Hours" },
-                { v: m, l: "Min" },
-                { v: s, l: "Sec" },
-              ].map((c, i) => (
-                <div
-                  key={i}
-                  className="bg-surface-2/80 border border-zinc-800 rounded-xl py-2.5 sm:py-3 px-1 backdrop-blur"
-                >
-                  <div className="text-2xl sm:text-3xl font-black text-white tabular-nums">
-                    {String(c.v).padStart(2, "0")}
+                { date: "Jun 11", team1: "Mexico", team2: "Canada", venue: "Estadio Azteca" },
+                { date: "Jun 12", team1: "USA", team2: "Ghana", venue: "SoFi Stadium" },
+                { date: "Jun 13", team1: "Argentina", team2: "Morocco", venue: "MetLife Stadium" },
+                { date: "Jun 14", team1: "England", team2: "Senegal", venue: "AT&T Stadium" },
+                { date: "Jun 15", team1: "Brazil", team2: "Saudi Arabia", venue: "Levi's Stadium" },
+                { date: "Jun 16", team1: "Germany", team2: "Japan", venue: "Mercedes-Benz Stadium" },
+              ].slice(0, 4).map((m, i) => (
+                <div key={i} className="flex items-center gap-3 bg-surface-2/60 border border-zinc-800/60 rounded-xl px-3.5 py-2.5 backdrop-blur">
+                  <span className="text-zinc-500 text-[11px] font-bold w-14 shrink-0">{m.date}</span>
+                  <div className="flex items-center gap-2 flex-1 min-w-0">
+                    <span className="text-white text-sm font-semibold truncate">{m.team1}</span>
+                    <span className="text-zinc-600 text-xs font-black shrink-0">VS</span>
+                    <span className="text-white text-sm font-semibold truncate">{m.team2}</span>
                   </div>
-                  <div className="text-[10px] sm:text-xs text-zinc-500 uppercase tracking-wider mt-0.5">
-                    {c.l}
-                  </div>
+                  <span className="text-zinc-600 text-[10px] hidden sm:block truncate w-28 text-right">{m.venue}</span>
                 </div>
               ))}
             </div>
