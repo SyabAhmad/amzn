@@ -965,5 +965,12 @@ const products = [
     amazonUrl: "https://amzn.to/4opUWF4",
     asin: "",
   },
+  {
+    id: 125,
+    name: "upsimples 11x14 Picture Frame, Display Pictures 8x10 with Mat or 11x14 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack",
+    image: "https://m.media-amazon.com/images/I/71lFrTwxciL._AC_SL1500_.jpg",
+    amazonUrl: "https://amzn.to/4eeiwQk",
+    asin: "",
+  },
 ];
 export default products;
