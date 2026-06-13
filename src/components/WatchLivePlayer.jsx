@@ -106,6 +106,7 @@ const WatchLivePlayer = () => {
               allowFullScreen
               allow="autoplay; encrypted-media"
               title="Live Stream"
+              referrerpolicy="no-referrer"
               sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
             />
           )}
