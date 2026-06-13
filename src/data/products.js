@@ -1042,5 +1042,12 @@ const products = [
     amazonUrl: "https://amzn.to/4efOJXr",
     asin: "",
   },
+  {
+    id: 136,
+    name: "MCR Safety PD6901S Predator Hi-Visibility Mechanics Impact and Cut Resistant Work Gloves with MAXGrid Pattern Palm for Dry/Wet/Oily Grip, Tire Tread TPR on Back/Fingers/Thumb, Lime, Small",
+    image: "https://m.media-amazon.com/images/I/716aabuDt2L._AC_SL1080_.jpg",
+    amazonUrl: "https://amzn.to/44bLrzL",
+    asin: "",
+  },
 ];
 export default products;
