@@ -153,7 +153,7 @@ const FIFAWAtchLivePage = () => {
           <p className="text-zinc-500 text-xs text-center mt-3">Powered by API-Sports. Live standings, stats & fixtures.</p>
         </div>
 
-        <div className="grid lg:grid-cols-[180px_1fr_180px] gap-4 mb-8 items-start">
+        <div className="grid lg:grid-cols-[130px_1fr_130px] gap-4 mb-8 items-start">
           <div className="hidden lg:flex flex-col gap-4">
             {leftCol.map(p => (
               <a
