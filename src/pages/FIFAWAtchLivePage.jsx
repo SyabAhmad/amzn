@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import RandomProducts from "../components/RandomProducts"
 import BigPosterFive from "../components/BigPosterFive"
@@ -10,27 +10,12 @@ import { buildBreadcrumbSchema } from "../utils/schemas"
 import products from "../data/products"
 
 const FIFAWAtchLivePage = () => {
-  const [adActive, setAdActive] = useState(false)
-
-  const goodProducts = products.filter(p => p.id !== 84)
-  const adProduct = goodProducts[Math.floor(Math.random() * goodProducts.length)]
-
-  useEffect(() => {
-    if (adActive) return
-    const timer = setTimeout(() => setAdActive(true), 30000)
-    return () => clearTimeout(timer)
-  }, [adActive])
-
-  useEffect(() => {
-    if (!adActive) return
-    const handler = (e) => {
-      e.preventDefault()
-      e.stopPropagation()
-      window.location.href = `https://fifa26.page/product/${adProduct.id}`
-    }
-    document.addEventListener("click", handler, true)
-    return () => document.removeEventListener("click", handler, true)
-  }, [adActive, adProduct])
+  const [adProducts] = useState(() => {
+    const pool = products.filter(p => p.id !== 84)
+    const shuffled = [...pool].sort(() => Math.random() - 0.5)
+    return shuffled.slice(0, 6)
+  })
+  const [leftCol, rightCol] = [adProducts.slice(0, 3), adProducts.slice(3, 6)]
 
   useSEO({
     title: "Watch FIFA 2026 Live Online Free — World Cup 2026 Live Stream, TV Channels & Full Match Replays",
@@ -168,7 +153,79 @@ const FIFAWAtchLivePage = () => {
           <p className="text-zinc-500 text-xs text-center mt-3">Powered by API-Sports. Live standings, stats & fixtures.</p>
         </div>
 
-        <WatchLivePlayer />
+        <div className="grid lg:grid-cols-[180px_1fr_180px] gap-4 mb-8 items-start">
+          <div className="hidden lg:flex flex-col gap-4">
+            {leftCol.map(p => (
+              <a
+                key={p.id}
+                href={p.amazonUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="group block bg-surface-2 rounded-xl border border-zinc-800 hover:border-brand/50 transition-all overflow-hidden"
+              >
+                <div className="aspect-square bg-surface-3">
+                  <img src={p.image} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-3">
+                  <h3 className="text-white font-semibold text-xs leading-snug line-clamp-2 mb-2">{p.name}</h3>
+                  <span className="flex items-center justify-center gap-1 w-full px-3 py-1.5 bg-brand text-black text-[10px] font-extrabold rounded-lg hover:bg-amber-400 transition-colors">
+                    Buy Now →
+                  </span>
+                </div>
+              </a>
+            ))}
+            <div className="text-[10px] text-zinc-600 text-center uppercase tracking-widest font-semibold">Ad</div>
+          </div>
+
+          <div className="min-w-0">
+            <WatchLivePlayer />
+          </div>
+
+          <div className="hidden lg:flex flex-col gap-4">
+            {rightCol.map(p => (
+              <a
+                key={p.id}
+                href={p.amazonUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="group block bg-surface-2 rounded-xl border border-zinc-800 hover:border-brand/50 transition-all overflow-hidden"
+              >
+                <div className="aspect-square bg-surface-3">
+                  <img src={p.image} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <div className="p-3">
+                  <h3 className="text-white font-semibold text-xs leading-snug line-clamp-2 mb-2">{p.name}</h3>
+                  <span className="flex items-center justify-center gap-1 w-full px-3 py-1.5 bg-brand text-black text-[10px] font-extrabold rounded-lg hover:bg-amber-400 transition-colors">
+                    Buy Now →
+                  </span>
+                </div>
+              </a>
+            ))}
+            <div className="text-[10px] text-zinc-600 text-center uppercase tracking-widest font-semibold">Ad</div>
+          </div>
+        </div>
+
+        <div className="lg:hidden grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8">
+          {adProducts.map(p => (
+            <a
+              key={p.id}
+              href={p.amazonUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="group block bg-surface-2 rounded-xl border border-zinc-800 hover:border-brand/50 transition-all overflow-hidden"
+            >
+              <div className="aspect-[4/3] bg-surface-3">
+                <img src={p.image} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-2.5">
+                <h3 className="text-white font-semibold text-[10px] leading-snug line-clamp-2 mb-1.5">{p.name}</h3>
+                <span className="flex items-center justify-center gap-1 w-full px-2 py-1.5 bg-brand text-black text-[10px] font-extrabold rounded-lg hover:bg-amber-400 transition-colors">
+                  Buy Now →
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
 
         <div className="border-t border-zinc-800 pt-12 mb-12">
           <div className="flex flex-wrap justify-center gap-2 mb-12 text-xs text-zinc-600 select-none">

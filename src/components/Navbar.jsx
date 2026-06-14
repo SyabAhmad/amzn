@@ -41,7 +41,6 @@ const Navbar = () => {
     { label: "Community", to: "/fifa-community" },
     { label: "Matches", to: "/fifa-matches" },
     { label: "Tickets", to: "/fifa-tickets" },
-    { label: "Watch Live", to: "/fifa-watch-live" },
     { label: "News", to: "/fifa-news" },
     { label: "Blog", to: "/blog" },
     { label: "About", to: "/about" },
@@ -90,6 +89,12 @@ const Navbar = () => {
                   {l.label}
                 </Link>
               ))}
+              <Link
+                to="/fifa-watch-live"
+                className="text-sm font-extrabold px-4 py-1.5 rounded-full bg-red-600 text-white hover:bg-red-500 transition-all animate-pulse"
+              >
+                🔴 LIVE
+              </Link>
             </div>
 
             <div className="md:hidden flex items-center gap-1">
@@ -152,6 +157,13 @@ const Navbar = () => {
                   {l.label}
                 </Link>
               ))}
+              <Link
+                to="/fifa-watch-live"
+                onClick={() => setMenuOpen(false)}
+                className="block mx-3 mt-2 text-center text-sm font-extrabold px-4 py-2.5 rounded-full bg-red-600 text-white hover:bg-red-500 transition-all animate-pulse"
+              >
+                🔴 WATCH LIVE
+              </Link>
             </div>
           )}
         </div>
