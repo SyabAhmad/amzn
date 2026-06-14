@@ -8,10 +8,10 @@ import { buildBreadcrumbSchema } from "../utils/schemas"
 
 const BlogsPage = () => {
   useSEO({
-    title: "FIFA 2026 Blog | Football Gear Guides, Sneaker Trends & World Cup Fashion",
-    description: "Expert FIFA 2026 blog covering the best jerseys, football sneakers, streetwear, kids gear, fan accessories, Amazon deals, watch online streaming guides, ticket buying tips, and host city travel guides for World Cup 2026.",
+    title: "FIFA 2026 Blog & Trending Topics — Streaming Guides, Sports News & Pop Culture",
+    description: "FIFA 2026 blog with free ad-free streaming guides, 4K HD watch guides, VPN setup for World Cup 2026, plus trending topics: Jalen Brunson NBA Finals, Australia vs Turkey, Caitlin Clark WNBA, Aldon Smith NFL, Sydney Sweeney, Eddie Hall vs Tommy Fury, PlayStation 6, Mandalorian movie, and more.",
     path: "/blog",
-    keywords: "fifa 2026 blog, fifa blog, world cup blog, fifa 2026 guides, football gear blog, world cup fashion, fifa sneakers, fifa jerseys, fifa tickets guide, fifa watch online, fifa travel guide",
+    keywords: "fifa 2026 blog, fifa blog, world cup blog, fifa 2026 guides, watch fifa free, ad free streaming, fifa 4K streaming, fifa VPN, Jalen Brunson, Australia vs Turkey, Caitlin Clark, Aldon Smith, Sydney Sweeney, Eddie Hall vs Tommy Fury, PS6, Mandalorian Grogu, trending topics, sports news, pop culture",
     jsonLd: buildBreadcrumbSchema([
       { name: "Home", url: "https://fifa26.page/" },
       { name: "Blog", url: "https://fifa26.page/blog" },
@@ -27,12 +27,13 @@ const BlogsPage = () => {
             Blog
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 leading-tight">
-            FIFA 2026 Football Guides &{" "}
-            <span className="text-brand">Style Trends</span>
+            FIFA 2026 Guides, Free Streaming &{" "}
+            <span className="text-brand">Trending Topics</span>
           </h1>
           <p className="text-zinc-400 mt-4 max-w-2xl mx-auto">
-            Expert guides on the best FIFA 2026 jerseys, football sneakers, streetwear fashion,
-            kids gear, fan accessories, and Amazon deals for World Cup 2026.
+            Expert guides on watching FIFA 2026 free without ads in 4K HD, plus trending sports,
+            entertainment, and gaming news — Jalen Brunson, Caitlin Clark, Australia vs Turkey,
+            PlayStation 6, Mandalorian movie, and more.
           </p>
         </div>
 
