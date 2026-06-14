@@ -1077,5 +1077,26 @@ const products = [
     amazonUrl: "https://amzn.to/49ZRVoW",
     asin: "",
   },
+  {
+    id: 141,
+    name: "Linen Shirts for Women Summer 2025 Retro Embroidered 3/4 Sleeve Boho Tops Dressy Casual Blouses Teacher Loose Tunics",
+    image: "https://m.media-amazon.com/images/I/61-tsSCgRsL._AC_SX679_.jpg",
+    amazonUrl: "https://amzn.to/3SoE4lX",
+    asin: "",
+  },
+  {
+    id: 142,
+    name: "Vibration Plate Fitness Platform Exercise Machine Vibrating Shaking Full Body Shaker Workout Vibrate Stand Shake Board Sport for Weight Loss Fat Burner for Gym Home Office",
+    image: "https://m.media-amazon.com/images/I/71pd6AHXkoL._AC_SL1500_.jpg",
+    amazonUrl: "https://amzn.to/4ev9y1s",
+    asin: "",
+  },
+  {
+    id: 143,
+    name: "10Ft Extension Cord with Multiple Outlets, Flat Plug Surge Protector Power Strip 10 Ft Long Cord, 8 Outlets & 4 USB Ports (2 USB C), Desk Charging Station for Home Office, College Dorm Room Essentials",
+    image: "https://m.media-amazon.com/images/I/718Hj40tWuL._AC_SL1500_.jpg",
+    amazonUrl: "https://amzn.to/4v9GIum",
+    asin: "",
+  },
 ];
 export default products;
